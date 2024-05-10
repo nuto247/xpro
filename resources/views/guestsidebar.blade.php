@@ -67,6 +67,20 @@
                                 </li><!-- .nk-menu-item -->
 
                                 <li class="nk-menu-item">
+                                    <a href="/register" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-menu-circled"></em></span>
+                                        <span class="nk-menu-text">Affiliates</span>
+                                    </a>
+                                </li><!-- .nk-menu-item -->
+
+                                <li class="nk-menu-item">
+                                    <a href="/login" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-menu-circled"></em></span>
+                                        <span class="nk-menu-text">Login</span>
+                                    </a>
+                                </li><!-- .nk-menu-item -->
+
+                                <li class="nk-menu-item">
                                     <a href="contact" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-menu-circled"></em></span>
                                         <span class="nk-menu-text">Contact</span>

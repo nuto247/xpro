@@ -11,7 +11,7 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
-    <title>Gallery | DashLite Admin Template</title>
+    <title>PAMPost | Grow Your Assets</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="./assets/css/dashlite.css?ver=3.1.2">
     <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=3.1.2">
@@ -62,7 +62,7 @@
                                 <div class="nk-block-head nk-block-head-sm">
                                     <div class="nk-block-between g-3">
                                         <div class="nk-block-head-content">
-                                            <h3 class="nk-block-title page-title">Image Gallery</h3>
+                                            <h3 class="nk-block-title page-title">Discover New Strategies To Earn More>></h3>
                                             <div class="nk-block-des text-soft">
                                                 <p>You have total <span class="text-base">1,257</span> Media.</p>
                                             </div>
@@ -90,9 +90,7 @@
                                                             <span class="sub-text">mock@softnio.com</span>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <button class="btn btn-p-0 btn-nofocus"><em class="icon ni ni-heart"></em><span>34</span></button>
-                                                    </div>
+                                               
                                                 </div>
                                             </div>
                                         </div>
@@ -111,9 +109,7 @@
                                                             <span class="sub-text">ander@softnio.com</span>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <button class="btn btn-p-0 btn-nofocus"><em class="icon ni ni-heart"></em><span>04</span></button>
-                                                    </div>
+                                                 
                                                 </div>
                                             </div>
                                         </div>
@@ -132,9 +128,7 @@
                                                             <span class="sub-text">krish@softnio.com</span>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <button class="btn btn-p-0 btn-nofocus"><em class="icon ni ni-heart"></em><span>349</span></button>
-                                                    </div>
+                                                 
                                                 </div>
                                             </div>
                                         </div>
@@ -153,9 +147,7 @@
                                                             <span class="sub-text">keith@softnio.com</span>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <button class="btn btn-p-0 btn-nofocus"><em class="icon ni ni-heart"></em><span>92</span></button>
-                                                    </div>
+                                               
                                                 </div>
                                             </div>
                                         </div>
@@ -174,9 +166,7 @@
                                                             <span class="sub-text">walker@softnio.com</span>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <button class="btn btn-p-0 btn-nofocus"><em class="icon ni ni-heart"></em><span>341</span></button>
-                                                    </div>
+                                               
                                                 </div>
                                             </div>
                                         </div>
@@ -195,9 +185,7 @@
                                                             <span class="sub-text">asiya@softnio.com</span>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <button class="btn btn-p-0 btn-nofocus"><em class="icon ni ni-heart"></em><span>139</span></button>
-                                                    </div>
+                                            
                                                 </div>
                                             </div>
                                         </div>
@@ -216,9 +204,7 @@
                                                             <span class="sub-text">abu@softnio.com</span>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <button class="btn btn-p-0 btn-nofocus"><em class="icon ni ni-heart"></em><span>148</span></button>
-                                                    </div>
+                                              
                                                 </div>
                                             </div>
                                         </div>
@@ -237,9 +223,7 @@
                                                             <span class="sub-text">mock@softnio.com</span>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <button class="btn btn-p-0 btn-nofocus"><em class="icon ni ni-heart"></em><span>314</span></button>
-                                                    </div>
+                                           
                                                 </div>
                                             </div>
                                         </div>

@@ -137,6 +137,7 @@
       <th scope="col">#</th>
       <th scope="col">Product Name</th>
       <th scope="col">Product Price</th>
+      <th scope="col">Product Image</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -145,7 +146,8 @@
     <tr>
       <th scope="row">1</th>
       <td>{{$product->product_name}}</td>
-      <td>{{$product->product_price}}</td>
+      <td>{{$product->product_price}}</td> 
+      <td><img src="{{ asset('images/' . $product->image_path) }}" width="100px" alt="Image"></td>
       <td> <button type="submit" class="btn btn-primary">Edit</button>  <button type="submit" class="btn btn-danger">Delete</button></td>
  
     </tr>

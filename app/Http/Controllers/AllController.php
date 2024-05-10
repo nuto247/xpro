@@ -35,6 +35,7 @@ class AllController extends Controller
             'product_name' => 'required|string',
             'product_description' => 'required|string',
             'product_price' => 'required|int',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
 
         ]);
 
@@ -47,6 +48,15 @@ class AllController extends Controller
         $product->product_name = $request->input('product_name');
         $product->product_description = $request->input('product_description');
         $product->product_price = $request->input('product_price');
+
+
+        $imageName = time().'.'.$request->image->extension();  
+
+        $request->image->move(public_path('images'), $imageName);
+    
+    
+        $product->image_path = $imageName;
+   
 
 
         $product->save();

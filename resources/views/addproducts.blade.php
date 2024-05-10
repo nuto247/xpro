@@ -129,7 +129,7 @@
                                 <div class="card card-bordered card-preview">
                                             <div class="card-inner">
                                                 <div class="preview-block">
-                                                <form method="POST" action="{{ url('/addproduct') }}">
+                                                <form method="POST" action="{{ url('/addproduct') }}" enctype="multipart/form-data">
                                                       @csrf
                                                     <div class="row gy-4">
                                                   
@@ -169,12 +169,14 @@
                                                             </div>
                                                         </div>
                                                         <br>
+
+                                                       
                                                         <div class="col-sm-8">
                                                             <div class="form-group">
                                                                 <label class="form-label" for="default-06">Product Image</label>
                                                                 <div class="form-control-wrap">
                                                                     <div class="form-file">
-                                                                        <input type="file" multiple class="form-file-input" id="customFile">
+                                                                        <input type="file" name="image" multiple class="form-file-input" id="customFile">
                                                                         <label class="form-file-label" for="customFile">Choose file</label>
                                                                     </div>
                                                                 </div>

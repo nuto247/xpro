@@ -148,7 +148,16 @@
       <td>{{$product->product_name}}</td>
       <td>{{$product->product_price}}</td> 
       <td><img src="{{ asset('images/' . $product->image_path) }}" width="100px" alt="Image"></td>
-      <td> <button type="submit" class="btn btn-primary">Edit</button>  <button type="submit" class="btn btn-danger">Delete</button></td>
+      <td> <a href="{{ route('editproducts', $product->id) }}"><button type="submit" class="btn btn-primary">Edit</button> </a> </td>
+
+      <td><form class="float-right m-0" method="post" action="{{ route('deleteproduct', $product->id ) }}">
+                                @method('delete')
+                                @csrf
+                                <div class="form-row">
+                               
+                                    <button class="btn btn-danger"> DELETE</button>
+                                </div>
+                            </form></td>
  
     </tr>
 @endforeach

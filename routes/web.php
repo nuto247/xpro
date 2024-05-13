@@ -15,9 +15,6 @@ use App\Http\Controllers\AllControllers;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::middleware([
     'auth:sanctum',
@@ -35,4 +32,24 @@ Route::post('/addproduct', [App\Http\Controllers\AllController::class, 'addprodu
 
 Route::get('/listproducts', [App\Http\Controllers\AllController::class, 'listproducts'])->name('listproducts');
 
+Route::get('/editproducts/{id}', [App\Http\Controllers\AllController::class, 'editproducts'])->name('editproducts');
+
+Route::get('/productdetail/{id}', [App\Http\Controllers\AllController::class, 'productdetail'])->name('productdetail');
+
+Route::delete('/deleteproduct/{id}', [App\Http\Controllers\AllController::class, 'deleteproduct'])->name('deleteproduct');
+
+Route::post('/productupdate', [App\Http\Controllers\AllController::class, 'productupdate'])->name('productupdate');
+
 Route::get('/dashboard', [App\Http\Controllers\AllController::class, 'dashboard'])->name('dashboard');
+
+Route::get('/', [App\Http\Controllers\AllController::class, 'welcome'])->name('welcome');
+
+// Laravel 8 & 9 PayStack Payment https://github.com/unicodeveloper/laravel-paystack
+
+Route::post('/pay', [App\Http\Controllers\PaymentController::class, 'redirectToGateway'])->name('pay');
+
+Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
+
+Route::post('/paynow', [App\Http\Controllers\PaymentController::class, 'paynow'])->name('paynow')->middleware('auth');
+
+Route::get('/redirectpay', [AllControllers::class, 'redirectpay'])->name('redirectpay')->middleware('auth');

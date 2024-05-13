@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zxx" class="js">
 
@@ -22,7 +21,7 @@
         <!-- main @s -->
         <div class="nk-main ">
             <!-- sidebar @s -->
-       @include('guestsidebar')
+            @include('guestsidebar')
             <!-- sidebar @e -->
             <!-- wrap @s -->
             <div class="nk-wrap ">
@@ -34,7 +33,7 @@
                                 <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
                             </div>
                             <div class="nk-header-brand d-xl-none">
-                                <a href="html/index.html" class="logo-link">
+                                <a href="/" class="logo-link">
                                     <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
                                     <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
                                 </a>
@@ -46,8 +45,9 @@
                             <div class="nk-header-tools">
                                 <ul class="nk-quick-nav">
                                   
+                           
                                  
-                                
+                                    
                                 </ul>
                             </div>
                         </div><!-- .nk-header-wrap -->
@@ -60,54 +60,102 @@
                         <div class="nk-content-inner">
                             <div class="nk-content-body">
                                 <div class="nk-block-head nk-block-head-sm">
-                                    <div class="nk-block-between g-3">
+                                    <div class="nk-block-between">
                                         <div class="nk-block-head-content">
-                                            <h3 class="nk-block-title page-title">Discover New Strategies To Earn More>></h3>
-                                            <div class="nk-block-des text-soft">
-                                                <p>You have total <span class="text-base">1,257</span> Media.</p>
+                                            <h3 class="nk-block-title page-title">Add Products</h3>
+                                        </div><!-- .nk-block-head-content -->
+                                        <div class="nk-block-head-content">
+                                            <div class="toggle-wrap nk-block-tools-toggle">
+                                                <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
+                                                <div class="toggle-expand-content" data-content="pageMenu">
+                                                    <ul class="nk-block-tools g-3">
+                                                        <li>
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-white btn-dim btn-outline-light" data-bs-toggle="dropdown"><em class="d-none d-sm-inline icon ni ni-calender-date"></em><span><span class="d-none d-md-inline">Last</span> 30 Days</span><em class="dd-indc icon ni ni-chevron-right"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><span>Last 30 Days</span></a></li>
+                                                                        <li><a href="#"><span>Last 6 Months</span></a></li>
+                                                                        <li><a href="#"><span>Last 1 Years</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="nk-block-tools-opt"><a href="#" class="btn btn-primary"><em class="icon ni ni-reports"></em><span>Reports</span></a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="nk-block-head-content">
-                                            <a href="#" class="btn btn-outline-light bg-white d-none d-sm-inline-flex"><em class="icon ni ni-download-cloud"></em><span>Download All</span></a>
-                                            <a href="#" class="btn btn-icon btn-outline-light bg-white d-inline-flex d-sm-none"><em class="icon ni ni-download-cloud"></em></a>
-                                        </div>
-                                    </div>
+                                        </div><!-- .nk-block-head-content -->
+                                    </div><!-- .nk-block-between -->
                                 </div><!-- .nk-block-head -->
-                                <div class="nk-block">
-                                    <div class="row g-gs">
+                                <div class="card card-bordered card-preview">
+                                            <div class="card-inner">
+                                                <div class="preview-block">
+                                                <form method="POST" action="{{ url('/productupdate') }}" enctype="multipart/form-data">
+                                                      @csrf
+                                                    <div class="row gy-4">
+                                                  
 
-                                    @foreach($products as $product)
-                                        <div class="col-sm-6 col-lg-4 col-xxl-3">
-                                            <div class="gallery card">
-                                                <a class="gallery-image popup-image" href="./images/stock/a.jpg">
-                                                    <img class="w-100 rounded-top" src="{{ asset('images/' . $product->image_path) }}" alt="">
-                                                </a>
-                                                
-                                                <div class="gallery-body card-inner align-center justify-between flex-wrap g-2">
-                                                    <div class="user-card">
-                                           
-                                                      
-                                                       
-                                                        <div class="user-info">
-                                                            <span class="lead-text"> {{$product->product_name}}</span>
-                                                            <span class="sub-text">NGN {{$product->product_price}}</span>
-                                                          
-                                                            <td>   <form method="POST" action="{{route('paynow', $product->id)}}">
-             @csrf
-            
-        <button type="submit" class="btn btn-primary">Click Here To Pay Now</button>
-           </form></td>
+                                                        <div class="col-sm-8">
+
+                                                        <input type="hidden" name="id" value="{{$product->id}}" readonly><br><br>
+                                                        <div class="form-group">
+                                                                <label class="form-label" for="default-06">Product Image</label>
+                                                                <div class="form-control-wrap">
+                                                                <div><img src="{{ asset('images/' . $product->image_path) }}" width="600px" alt="Image"></div>
+                                                                <br>
+                                                                 
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="default-01">Product Name</label>
+                                                                <div class="form-control-wrap">
+                                                                    <input type="text" class="form-control" id="default-01" name="product_name" value="{{$product->product_name}}" placeholder="Product Name" readonly>
+                                                                </div>
+                                                            </div>
                                                         </div>
+                                                      
+                                                     <br>
+                                                     <div class="col-sm-8">
+                                                     <div class="form-group">
+    <label class="form-label" for="default-01">Product Price</label>
+    <div class="form-control-wrap">
+        <input type="text" class="form-control" id="default-01" name="product_price" value="{{$product->product_price}}" placeholder="Product Price" readonly>
+    </div>
+</div>
+</div>
+<br>
+
+                                                      
+
+
+                                                        <div class="col-sm-8">
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="default-textarea">Product Description</label>
+                                                                <div class="form-control-wrap">
+                                                                    <textarea class="form-control no-resize" name="product_description" value="{{$product->product_description}}" id="default-textarea" readonly>{{$product->product_description}}</textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+
+                                                       
+                                                        <div class="col-sm-8">
+                                                          
+                                                            <br>
+
+                                                            <button type="submit" class="btn btn-primary">Buy Now</button>
+
+
+                                                         
                                                     </div>
-                                               
                                                 </div>
                                             </div>
                                         </div>
 
-                                        @endforeach
-                                    
-                                    </div>
-                                </div><!-- .nk-block -->
+</form>
                             </div>
                         </div>
                     </div>
@@ -117,7 +165,7 @@
                 <div class="nk-footer">
                     <div class="container-fluid">
                         <div class="nk-footer-wrap">
-                            <div class="nk-footer-copyright"> &copy; 2022 DashLite. Template by <a href="https://softnio.com" target="_blank">Softnio</a>
+                            <div class="nk-footer-copyright"> &copy; 2024. Innovative Goldstructures Limited.
                             </div>
                             <div class="nk-footer-links">
                                 <ul class="nav nav-sm">
@@ -289,6 +337,7 @@
     <!-- JavaScript -->
     <script src="./assets/js/bundle.js?ver=3.1.2"></script>
     <script src="./assets/js/scripts.js?ver=3.1.2"></script>
+    <script src="./assets/js/charts/chart-ecommerce.js?ver=3.1.2"></script>
 </body>
 
 </html>

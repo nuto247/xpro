@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2024 at 06:21 PM
+-- Generation Time: May 15, 2024 at 10:58 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -86,16 +86,25 @@ CREATE TABLE `orderdetails` (
 
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
-  `usr_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `payment_method` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL,
   `amount` decimal(10,0) NOT NULL,
+  `currency` varchar(255) NOT NULL,
   `transaction_id` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `refferalcode` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `payment_method`, `status`, `amount`, `currency`, `transaction_id`, `image`, `refferalcode`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Card', 'Pending', '200', '₦', '2jycploqrg', 'product_image', 1, '2024-05-14 11:20:59', '2024-05-14 11:20:59'),
+(2, 1, 'Card', 'Pending', '200', '₦', '2jycploqrg', 'product_image', 1, '2024-05-14 11:21:54', '2024-05-14 11:21:54');
 
 -- --------------------------------------------------------
 
@@ -147,7 +156,7 @@ CREATE TABLE `products` (
   `product_name` varchar(255) NOT NULL,
   `product_price` int(11) NOT NULL,
   `product_description` text NOT NULL,
-  `image_path` varchar(255) NOT NULL,
+  `image_path` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -157,9 +166,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `product_name`, `product_price`, `product_description`, `image_path`, `created_at`, `updated_at`) VALUES
-(1, 'Ebook Creation MasterClass', 2000, 'Everything you need to know about ebook creation', '', '2024-05-10 11:38:49', '2024-05-10 11:38:49'),
-(2, 'Free Digital Marketing MasterClass', 0, 'Free Digital Marketing Training', '', '2024-05-10 11:51:34', '2024-05-10 11:51:34'),
-(3, 'Premium Digital Marketing MasterClass', 5000, 'Everything Digital marketing', '1715350771.jpg', '2024-05-10 13:19:31', '2024-05-10 13:19:31');
+(3, 'Premium Digital Marketing MasterClass Academy', 5000, 'Everything Digital marketing bgg vvvvvvvvvvvv', '1715607889.jpg', '2024-05-10 13:19:31', '2024-05-13 12:44:49'),
+(4, 'Free Digital Marketing MasterClass Academy', 0, 'Large text area contentLarge text area contentLarge text area contentLarge text area contentLarge text area contentLarge text area contentLarge text area contentLarge text area contentLarge text area content', '1715601699.jpg', '2024-05-13 10:01:35', '2024-05-13 11:01:39'),
+(5, 'My Kitchen Cooking MasterClass Academy', 25000, 'Large text area contentLarge text area contentLarge text area contentLarge text area contentLarge text area contentLarge text area contentLarge text area contentLarge text area content', '1715600959.jpg', '2024-05-13 10:47:14', '2024-05-13 10:49:19');
 
 -- --------------------------------------------------------
 
@@ -181,7 +190,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('aRCIx73JQWrg2WUihwQ5FkVMoXzTyurFmPMiYB3I', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0', 'YTo1OntzOjM6InVybCI7YTowOnt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NjoiX3Rva2VuIjtzOjQwOiI4dlR0VjEzb0tTZkszMzcwM0dKTUp6U2pNT1luM0NRNXpBNXk3ZzExIjtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMiRvYzY1ajBrNzM2a2YxbDJTejdFNVVlSm5pVVBNa291UHVhZjlHaXU3eWdpT09WMjZyY01ISyI7fQ==', 1715355216);
+('GEKHKTv4GD3XybdqrAwCb6TwfqIKvVS9tBcxni1i', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoibVhqOURxYzhpa042SUg5UjloOTVobnoyZmx0V3hqUFg5QkZIcWtsQiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MzoidXJsIjthOjA6e31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo0O30=', 1715685598),
+('qFewPLnoQSMDTAmyiOK3KfYaY0naJSWhiKgr5MPw', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiblNRTHpCdkhtMEZDbkhhUFhXUzFzYWtvVEd6MzNMTFNPQk1wRE5OVCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MzoidXJsIjthOjA6e31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo0O30=', 1715685424),
+('UZcnALGkqdYX6zPiZmRyakQtoJFjNK3QeZ9qR4QH', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicHhjaHJickN1cDBUaXUwN0N6RWFZUmJNeFQ4aWo5SXVib3Vwc1hsdyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9yZWRpcmVjdHBheT9yZWZlcmVuY2U9Mmp5Y3Bsb3FyZyZ0cnhyZWY9Mmp5Y3Bsb3FyZyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MzoidXJsIjthOjA6e31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1715689652);
 
 -- --------------------------------------------------------
 
@@ -213,7 +224,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `affiliate_code`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
 (1, 'Onutochukwu Uche', '', 'uchetochukwu@gmail.com', NULL, '$2y$12$c1yAOEZJda3RkvROUJ1PC.D8Dy1JWLR9ylV.XMOHGPFRFhQGW/n5a', NULL, NULL, NULL, NULL, NULL, NULL, '2024-05-06 14:44:36', '2024-05-06 14:44:36'),
 (2, 'Solomon Sam', '94838190', 'sol@gmail.com', NULL, '$2y$12$wOalRftydIkuhL81tJUcMeF7NGr8VP/sg7he/efXoCDekSKu.XQS2', NULL, NULL, NULL, NULL, NULL, NULL, '2024-05-09 13:28:53', '2024-05-09 13:28:53'),
-(3, 'Pam Post', '9646816', 'sales@pampost.com', NULL, '$2y$12$oc65j0k736kf1l2Sz7E5UeJniUPMkouPuaf9Giu7ygiOOV26rcMHK', NULL, NULL, NULL, 'K4log3UHB0LCirXuH4YxTRnTnky411eyR413NOZdNw2ZMKD0RtV5v6AYU5K7', NULL, NULL, '2024-05-10 08:50:20', '2024-05-10 08:50:20');
+(3, 'Pam Post', '9646816', 'sales@pampost.com', NULL, '$2y$12$oc65j0k736kf1l2Sz7E5UeJniUPMkouPuaf9Giu7ygiOOV26rcMHK', NULL, NULL, NULL, 'K4log3UHB0LCirXuH4YxTRnTnky411eyR413NOZdNw2ZMKD0RtV5v6AYU5K7', NULL, NULL, '2024-05-10 08:50:20', '2024-05-10 08:50:20'),
+(4, 'Bill D Gates', '76275555', 'bill@gate.com', NULL, '$2y$12$PAOq1qvS4kYS8/8mUdp6g.uu6BUWF1xpdmQxIVMwLHOrwZgnzzBnS', NULL, NULL, NULL, NULL, NULL, NULL, '2024-05-14 10:13:36', '2024-05-14 10:13:36');
 
 --
 -- Indexes for dumped tables
@@ -293,7 +305,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -305,13 +317,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

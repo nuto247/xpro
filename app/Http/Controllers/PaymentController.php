@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Redirect;
 use Paystack;
 
 use App\Models\Product;
+use App\Models\Order;
+use App\Models\Orderdetail;
+use App\Models\User;
+use Illuminate\Support\Facades\Cookie;
 
 class PaymentController extends Controller
 {
@@ -47,7 +51,7 @@ class PaymentController extends Controller
     {
       $product = Product::all()->first();
 
-      $amount = 5000;
+      $amount = 100;
 
       $total = str_replace([',', '.'], '', $amount);
 
@@ -162,12 +166,15 @@ class PaymentController extends Controller
 
 
 
+            $order->id = $userId;
             $order->user_id = $userId;
             $order->payment_method = 'Card';
             $order->status =  'Pending';
             $order->currency =  '₦';
             $order->amount = $orderAmount;
+            $order->image =  'product_image';
             $order->transaction_id = $transaction_id;
+            $order->refferalcode =   1;
             $order->save();
 
             $product = Product::all()->first();

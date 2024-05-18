@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AffliateEarningsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AllControllers;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-   
+
 });
 
 Route::get('/logout', [App\Http\Controllers\AllController::class, 'logout'])->name('logout');
@@ -43,6 +45,10 @@ Route::post('/productupdate', [App\Http\Controllers\AllController::class, 'produ
 Route::get('/dashboard', [App\Http\Controllers\AllController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/', [App\Http\Controllers\AllController::class, 'welcome'])->name('welcome');
+
+Route::get('/orders', [OrderController::class, 'list'])->name('order_list');
+
+Route::get('/affliate-earnings', [AffliateEarningsController::class, 'list'])->name('affliate_earning_list');
 
 // Laravel 8 & 9 PayStack Payment https://github.com/unicodeveloper/laravel-paystack
 

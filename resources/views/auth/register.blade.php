@@ -29,6 +29,13 @@
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
+            @if(Cookie::has('ref_code'))
+            <div class="mt-4">
+                <x-label for="ref_code" value="{{ __('Refferal Code') }}" />
+                <x-input id="ref_code" class="block mt-1 w-full" type="text" :value="Cookie::get('ref_code')" readonly disabled name="ref_code" />
+            </div>
+            @endif
+
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
                     <x-label for="terms">

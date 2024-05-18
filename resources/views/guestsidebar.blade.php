@@ -16,13 +16,13 @@
                     <div class="nk-sidebar-content">
                         <div class="nk-sidebar-menu" data-simplebar>
                             <ul class="nk-menu">
-                       
-                    
+
+
                                 <li class="nk-menu-heading">
                                     <h6 class="overline-title text-primary-alt">Components</h6>
                                 </li><!-- .nk-menu-heading -->
-                             
-                        
+
+
                                 <li class="nk-menu-item">
                                     <a href="/" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-menu-circled"></em></span>
@@ -62,14 +62,23 @@
                                         <li class="nk-menu-item">
                                             <a href="listproducts" class="nk-menu-link"><span class="nk-menu-text">Facebook advertising</span></a>
                                         </li>
-                                       
+
                                     </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->
 
+
                                 <li class="nk-menu-item">
-                                    <a href="/register" class="nk-menu-link">
+                                    <a href="{{ route('order_list') }}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-menu-circled"></em></span>
-                                        <span class="nk-menu-text">Affiliates</span>
+                                        <span class="nk-menu-text">Orders</span>
+                                    </a>
+                                </li><!-- .nk-menu-item -->
+
+
+                                <li class="nk-menu-item">
+                                    <a href="{{ route('affliate_earning_list') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-menu-circled"></em></span>
+                                        <span class="nk-menu-text">Affiliates Earnings</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
 
@@ -86,8 +95,8 @@
                                         <span class="nk-menu-text">Contact</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
-                   
-                               
+
+
                             </ul><!-- .nk-menu -->
                         </div><!-- .nk-sidebar-menu -->
                     </div><!-- .nk-sidebar-content -->

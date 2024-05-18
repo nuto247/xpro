@@ -66,10 +66,10 @@
                                 <div class="nk-block-head nk-block-head-sm">
                                     <div class="nk-block-between g-3">
                                         <div class="nk-block-head-content">
-                                            <h3 class="nk-block-title page-title">Discover New Strategies To Earn More>>
+                                            <h3 class="nk-block-title page-title">Orders
                                             </h3>
                                             <div class="nk-block-des text-soft">
-                                                <p>You have total <span class="text-base">1,257</span> Media.</p>
+                                                <p>You have total <span class="text-base">1,257</span> Orders.</p>
                                             </div>
                                         </div>
                                         <div class="nk-block-head-content">
@@ -85,48 +85,123 @@
                                 <div class="nk-block">
                                     <div class="row g-gs">
 
-                                        @foreach ($products as $product)
-                                            <div class="col-sm-6 col-lg-4 col-xxl-3">
-                                                <div class="gallery card">
-                                                    <a class="gallery-image popup-image" href="./images/stock/a.jpg">
-                                                        <img class="w-100 rounded-top"
-                                                            src="{{ asset('images/' . $product->image_path) }}"
-                                                            alt="">
-                                                    </a>
-
-                                                    <div
-                                                        class="gallery-body card-inner align-center justify-between flex-wrap g-2">
-                                                        <div class="user-card">
-
-
-
-                                                            <div class="user-info">
-                                                                <span class="lead-text">
-                                                                    {{ $product->product_name }}</span>
-                                                                <span class="sub-text">NGN
-                                                                    {{ $product->product_price }}</span>
-
-                                                                <td>
-                                                                    <form method="POST"
-                                                                        action="{{ route('paynow') }}">
-                                                                        @csrf
-
-                                                                        <input type="hidden" name="product_id"
-                                                                            value="{{ $product->id }}">
-
-                                                                        <button type="submit" class="btn btn-primary">
-                                                                            Click Here To Pay Now
-                                                                        </button>
-
-                                                                    </form>
-                                                                </td>
+                                        <div class="col-xxl-8">
+                                            <div class="card card-full">
+                                                <div class="card-inner">
+                                                    <div class="card-title-group">
+                                                        <div class="card-title">
+                                                            <h6 class="title">Recent Orders</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-tb-list mt-n2">
+                                                    <div class="nk-tb-item nk-tb-head">
+                                                        <div class="nk-tb-col"><span>Order No.</span></div>
+                                                        <div class="nk-tb-col tb-col-sm"><span>Customer</span></div>
+                                                        <div class="nk-tb-col tb-col-md"><span>Date</span></div>
+                                                        <div class="nk-tb-col"><span>Amount</span></div>
+                                                        <div class="nk-tb-col"><span
+                                                                class="d-none d-sm-inline">Status</span></div>
+                                                    </div>
+                                                    <div class="nk-tb-item">
+                                                        <div class="nk-tb-col"><span class="tb-lead"><a
+                                                                    href="#">#95954</a></span></div>
+                                                        <div class="nk-tb-col tb-col-sm">
+                                                            <div class="user-card">
+                                                                <div class="user-avatar sm bg-purple-dim">
+                                                                    <span>AB</span></div>
+                                                                <div class="user-name"><span class="tb-lead">Abu Bin
+                                                                        Ishtiyak</span></div>
                                                             </div>
                                                         </div>
-
+                                                        <div class="nk-tb-col tb-col-md"><span
+                                                                class="tb-sub">02/11/2020</span></div>
+                                                        <div class="nk-tb-col"><span class="tb-sub tb-amount">4,596.75
+                                                                <span>USD</span></span></div>
+                                                        <div class="nk-tb-col"><span
+                                                                class="badge badge-dot badge-dot-xs bg-success">Paid</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nk-tb-item">
+                                                        <div class="nk-tb-col"><span class="tb-lead"><a
+                                                                    href="#">#95850</a></span></div>
+                                                        <div class="nk-tb-col tb-col-sm">
+                                                            <div class="user-card">
+                                                                <div class="user-avatar sm bg-azure-dim">
+                                                                    <span>DE</span></div>
+                                                                <div class="user-name"><span class="tb-lead">Desiree
+                                                                        Edwards</span></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nk-tb-col tb-col-md"><span
+                                                                class="tb-sub">02/02/2020</span></div>
+                                                        <div class="nk-tb-col"><span class="tb-sub tb-amount">596.75
+                                                                <span>USD</span></span></div>
+                                                        <div class="nk-tb-col"><span
+                                                                class="badge badge-dot badge-dot-xs bg-danger">Canceled</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nk-tb-item">
+                                                        <div class="nk-tb-col"><span class="tb-lead"><a
+                                                                    href="#">#95812</a></span></div>
+                                                        <div class="nk-tb-col tb-col-sm">
+                                                            <div class="user-card">
+                                                                <div class="user-avatar sm bg-warning-dim"><img
+                                                                        src="/demo2/images/avatar/b-sm.jpg"
+                                                                        alt=""></div>
+                                                                <div class="user-name"><span class="tb-lead">Blanca
+                                                                        Schultz</span></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nk-tb-col tb-col-md"><span
+                                                                class="tb-sub">02/01/2020</span></div>
+                                                        <div class="nk-tb-col"><span class="tb-sub tb-amount">199.99
+                                                                <span>USD</span></span></div>
+                                                        <div class="nk-tb-col"><span
+                                                                class="badge badge-dot badge-dot-xs bg-success">Paid</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nk-tb-item">
+                                                        <div class="nk-tb-col"><span class="tb-lead"><a
+                                                                    href="#">#95256</a></span></div>
+                                                        <div class="nk-tb-col tb-col-sm">
+                                                            <div class="user-card">
+                                                                <div class="user-avatar sm bg-purple-dim">
+                                                                    <span>NL</span></div>
+                                                                <div class="user-name"><span class="tb-lead">Naomi
+                                                                        Lawrence</span></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nk-tb-col tb-col-md"><span
+                                                                class="tb-sub">01/29/2020</span></div>
+                                                        <div class="nk-tb-col"><span class="tb-sub tb-amount">1099.99
+                                                                <span>USD</span></span></div>
+                                                        <div class="nk-tb-col"><span
+                                                                class="badge badge-dot badge-dot-xs bg-success">Paid</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nk-tb-item">
+                                                        <div class="nk-tb-col"><span class="tb-lead"><a
+                                                                    href="#">#95135</a></span></div>
+                                                        <div class="nk-tb-col tb-col-sm">
+                                                            <div class="user-card">
+                                                                <div class="user-avatar sm bg-success-dim">
+                                                                    <span>CH</span></div>
+                                                                <div class="user-name"><span class="tb-lead">Cassandra
+                                                                        Hogan</span></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nk-tb-col tb-col-md"><span
+                                                                class="tb-sub">01/29/2020</span></div>
+                                                        <div class="nk-tb-col"><span class="tb-sub tb-amount">1099.99
+                                                                <span>USD</span></span></div>
+                                                        <div class="nk-tb-col"><span
+                                                                class="badge badge-dot badge-dot-xs bg-warning">Due</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        @endforeach
+                                        </div>
 
                                     </div>
                                 </div><!-- .nk-block -->

@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <meta name="description"
+        content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
@@ -21,7 +22,7 @@
         <!-- main @s -->
         <div class="nk-main ">
             <!-- sidebar @s -->
-      @include('adminsidebar')
+            @include('adminsidebar')
             <!-- sidebar @e -->
             <!-- wrap @s -->
             <div class="nk-wrap ">
@@ -30,23 +31,27 @@
                     <div class="container-fluid">
                         <div class="nk-header-wrap">
                             <div class="nk-menu-trigger d-xl-none ms-n1">
-                                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
+                                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em
+                                        class="icon ni ni-menu"></em></a>
                             </div>
                             <div class="nk-header-brand d-xl-none">
                                 <a href="/" class="logo-link">
-                                    <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                                    <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                                    <img class="logo-light logo-img" src="./images/logo.png"
+                                        srcset="./images/logo2x.png 2x" alt="logo">
+                                    <img class="logo-dark logo-img" src="./images/logo-dark.png"
+                                        srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
                                 </a>
                             </div><!-- .nk-header-brand -->
                             <div class="nk-header-search ms-3 ms-xl-0">
                                 <em class="icon ni ni-search"></em>
-                                <input type="text" class="form-control border-transparent form-focus-none" placeholder="Search anything">
+                                <input type="text" class="form-control border-transparent form-focus-none"
+                                    placeholder="Search anything">
                             </div><!-- .nk-header-news -->
                             <div class="nk-header-tools">
                                 <ul class="nk-quick-nav">
-                                  
-                           
-                                 
+
+
+
                                     <li class="dropdown user-dropdown">
                                         <a href="#" class="dropdown-toggle me-n1" data-bs-toggle="dropdown">
                                             <div class="user-toggle">
@@ -55,33 +60,42 @@
                                                 </div>
                                                 <div class="user-info d-none d-xl-block">
                                                     <div class="user-status user-status-unverified">Unverified</div>
-                                                    <div class="user-name dropdown-indicator">{{$user->name}}</div>
+                                                    <div class="user-name dropdown-indicator">{{ $user->name }}</div>
                                                 </div>
                                             </div>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-md dropdown-menu-end">
                                             <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
                                                 <div class="user-card">
-                                                <div class="user-avatar sm">
-                                                    <em class="icon ni ni-user-alt"></em>
-                                                </div>
+                                                    <div class="user-avatar sm">
+                                                        <em class="icon ni ni-user-alt"></em>
+                                                    </div>
                                                     <div class="user-info">
-                                                        <span class="lead-text">{{$user->name}}</span>
-                                                        <span class="sub-text">{{$user->email}}</span>
+                                                        <span class="lead-text">{{ $user->name }}</span>
+                                                        <span class="sub-text">{{ $user->email }}</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
-                                                    <li><a href="html/user-profile-regular.html"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
-                                                    <li><a href="html/user-profile-setting.html"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
-                                                    <li><a href="html/user-profile-activity.html"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
-                                                    <li><a class="dark-switch" href="#"><em class="icon ni ni-moon"></em><span>Dark Mode</span></a></li>
+                                                    <li><a href="html/user-profile-regular.html"><em
+                                                                class="icon ni ni-user-alt"></em><span>View
+                                                                Profile</span></a></li>
+                                                    <li><a href="html/user-profile-setting.html"><em
+                                                                class="icon ni ni-setting-alt"></em><span>Account
+                                                                Setting</span></a></li>
+                                                    <li><a href="html/user-profile-activity.html"><em
+                                                                class="icon ni ni-activity-alt"></em><span>Login
+                                                                Activity</span></a></li>
+                                                    <li><a class="dark-switch" href="#"><em
+                                                                class="icon ni ni-moon"></em><span>Dark Mode</span></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
-                                                    <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                                    <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign
+                                                                out</span></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -91,7 +105,7 @@
                         </div><!-- .nk-header-wrap -->
                     </div><!-- .container-fliud -->
                 </div>
-          
+
                 <!-- main header @e -->
                 <!-- content @s -->
                 <div class="nk-content ">
@@ -105,22 +119,35 @@
                                         </div><!-- .nk-block-head-content -->
                                         <div class="nk-block-head-content">
                                             <div class="toggle-wrap nk-block-tools-toggle">
-                                                <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
+                                                <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1"
+                                                    data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
                                                         <li>
                                                             <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-white btn-dim btn-outline-light" data-bs-toggle="dropdown"><em class="d-none d-sm-inline icon ni ni-calender-date"></em><span><span class="d-none d-md-inline">Last</span> 30 Days</span><em class="dd-indc icon ni ni-chevron-right"></em></a>
+                                                                <a href="#"
+                                                                    class="dropdown-toggle btn btn-white btn-dim btn-outline-light"
+                                                                    data-bs-toggle="dropdown"><em
+                                                                        class="d-none d-sm-inline icon ni ni-calender-date"></em><span><span
+                                                                            class="d-none d-md-inline">Last</span> 30
+                                                                        Days</span><em
+                                                                        class="dd-indc icon ni ni-chevron-right"></em></a>
                                                                 <div class="dropdown-menu dropdown-menu-end">
                                                                     <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><span>Last 30 Days</span></a></li>
-                                                                        <li><a href="#"><span>Last 6 Months</span></a></li>
-                                                                        <li><a href="#"><span>Last 1 Years</span></a></li>
+                                                                        <li><a href="#"><span>Last 30
+                                                                                    Days</span></a></li>
+                                                                        <li><a href="#"><span>Last 6
+                                                                                    Months</span></a></li>
+                                                                        <li><a href="#"><span>Last 1
+                                                                                    Years</span></a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
                                                         </li>
-                                                        <li class="nk-block-tools-opt"><a href="#" class="btn btn-primary"><em class="icon ni ni-reports"></em><span>Reports</span></a></li>
+                                                        <li class="nk-block-tools-opt"><a href="#"
+                                                                class="btn btn-primary"><em
+                                                                    class="icon ni ni-reports"></em><span>Reports</span></a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -142,10 +169,14 @@
                                                             <div class="data-group">
                                                                 <div class="amount">1,945</div>
                                                                 <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayOrders"></canvas>
+                                                                    <canvas class="ecommerce-line-chart-s3"
+                                                                        id="todayOrders"></canvas>
                                                                 </div>
                                                             </div>
-                                                            <div class="info"><span class="change up text-danger"><em class="icon ni ni-arrow-long-up"></em>4.63%</span><span> vs. last week</span></div>
+                                                            <div class="info"><span
+                                                                    class="change up text-danger"><em
+                                                                        class="icon ni ni-arrow-long-up"></em>4.63%</span><span>
+                                                                    vs. last week</span></div>
                                                         </div>
                                                     </div><!-- .card-inner -->
                                                 </div><!-- .nk-ecwg -->
@@ -164,10 +195,14 @@
                                                             <div class="data-group">
                                                                 <div class="amount">$2,338</div>
                                                                 <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayRevenue"></canvas>
+                                                                    <canvas class="ecommerce-line-chart-s3"
+                                                                        id="todayRevenue"></canvas>
                                                                 </div>
                                                             </div>
-                                                            <div class="info"><span class="change down text-danger"><em class="icon ni ni-arrow-long-down"></em>2.34%</span><span> vs. last week</span></div>
+                                                            <div class="info"><span
+                                                                    class="change down text-danger"><em
+                                                                        class="icon ni ni-arrow-long-down"></em>2.34%</span><span>
+                                                                    vs. last week</span></div>
                                                         </div>
                                                     </div><!-- .card-inner -->
                                                 </div><!-- .nk-ecwg -->
@@ -186,10 +221,14 @@
                                                             <div class="data-group">
                                                                 <div class="amount">847</div>
                                                                 <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayCustomers"></canvas>
+                                                                    <canvas class="ecommerce-line-chart-s3"
+                                                                        id="todayCustomers"></canvas>
                                                                 </div>
                                                             </div>
-                                                            <div class="info"><span class="change up text-danger"><em class="icon ni ni-arrow-long-up"></em>4.63%</span><span> vs. last week</span></div>
+                                                            <div class="info"><span
+                                                                    class="change up text-danger"><em
+                                                                        class="icon ni ni-arrow-long-up"></em>4.63%</span><span>
+                                                                    vs. last week</span></div>
                                                         </div>
                                                     </div><!-- .card-inner -->
                                                 </div><!-- .nk-ecwg -->
@@ -208,29 +247,59 @@
                                                             <div class="data-group">
                                                                 <div class="amount">23,485</div>
                                                                 <div class="nk-ecwg6-ck">
-                                                                    <canvas class="ecommerce-line-chart-s3" id="todayVisitors"></canvas>
+                                                                    <canvas class="ecommerce-line-chart-s3"
+                                                                        id="todayVisitors"></canvas>
                                                                 </div>
                                                             </div>
-                                                            <div class="info"><span class="change down text-danger"><em class="icon ni ni-arrow-long-down"></em>2.34%</span><span> vs. last week</span></div>
+                                                            <div class="info"><span
+                                                                    class="change down text-danger"><em
+                                                                        class="icon ni ni-arrow-long-down"></em>2.34%</span><span>
+                                                                    vs. last week</span></div>
                                                         </div>
                                                     </div><!-- .card-inner -->
                                                 </div><!-- .nk-ecwg -->
                                             </div><!-- .card -->
                                         </div><!-- .col -->
-                                        <div>
 
-<a href="https://pampost.com?ref={{auth()->user()->affiliate_code}}">My Refferal Link:  https://pampost.com?ref={{auth()->user()->affiliate_code}}</a>
-
-</div>
-                           
                                     </div><!-- .row -->
                                 </div><!-- .nk-block -->
+
+                                <div class="nk-block">
+                                    <div class="card card-bordered">
+                                        <div class="nk-refwg">
+                                            <div class="nk-refwg-invite card-inner">
+                                                <div class="nk-refwg-head g-3">
+                                                    <div class="nk-refwg-title">
+                                                        <h5 class="title">Refer Us &amp; Earn</h5>
+                                                        <div class="title-sub">Use the bellow link to invite your
+                                                            friends.</div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="nk-refwg-url">
+                                                    <div class="form-control-wrap">
+                                                        <div class="form-clip clipboard-init"
+                                                            data-clipboard-target="#refUrl" data-success="Copied"
+                                                            data-text="Copy Link"><em
+                                                                class="clipboard-icon icon ni ni-copy"></em> <span
+                                                                class="clipboard-text">Copy Link</span></div>
+                                                        <div class="form-icon"><em class="icon ni ni-link-alt"></em>
+                                                        </div><input type="text" class="form-control copy-text"
+                                                            id="refUrl" value="{{ url('/') . '?ref=' . auth()->user()->affiliate_code }}"
+                                                            spellcheck="false" data-ms-editor="true">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-              
+
                 <!-- content @e -->
                 <!-- footer @s -->
                 <div class="nk-footer">
@@ -241,7 +310,9 @@
                             <div class="nk-footer-links">
                                 <ul class="nav nav-sm">
                                     <li class="nav-item dropup">
-                                        <a href="#" class="dropdown-toggle dropdown-indicator has-indicator nav-link text-base" data-bs-toggle="dropdown" data-offset="0,10"><span>English</span></a>
+                                        <a href="#"
+                                            class="dropdown-toggle dropdown-indicator has-indicator nav-link text-base"
+                                            data-bs-toggle="dropdown" data-offset="0,10"><span>English</span></a>
                                         <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
                                             <ul class="language-list">
                                                 <li>
@@ -268,7 +339,9 @@
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <a data-bs-toggle="modal" href="#region" class="nav-link"><em class="icon ni ni-globe"></em><span class="ms-1">Select Region</span></a>
+                                        <a data-bs-toggle="modal" href="#region" class="nav-link"><em
+                                                class="icon ni ni-globe"></em><span class="ms-1">Select
+                                                Region</span></a>
                                     </li>
                                 </ul>
                             </div>

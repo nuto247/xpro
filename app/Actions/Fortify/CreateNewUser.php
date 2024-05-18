@@ -30,7 +30,6 @@ class CreateNewUser implements CreatesNewUsers
         $ref = '';
 
         if(Cookie::has('ref_code')) {
-
             $ref = Cookie::get('ref_code');
         }
 
@@ -38,10 +37,19 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
-            'affiliate_code' => rand(00000000, 99999999),
+            'affiliate_code' => $this->generateRandomString(10),
             'refferral_code' => $ref
-
-        
         ]);
+
+    }
+
+    public function generateRandomString($length = 25) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
     }
 }

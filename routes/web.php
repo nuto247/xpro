@@ -61,3 +61,14 @@ Route::post('/paynow', [App\Http\Controllers\PaymentController::class, 'paynow']
 Route::get('/redirectpay', [App\Http\Controllers\PaymentController::class, 'redirectpay'])->name('redirectpay')->middleware('auth');
 
 Route::get('/boost', [App\Http\Controllers\AllController::class, 'boost'])->name('boost')->middleware('auth');
+
+
+Route::get('/about', [App\Http\Controllers\AllController::class, 'about'])->name('about');
+
+
+Route::get('/courses', [App\Http\Controllers\AllController::class, 'courses'])->name('courses');
+
+
+Route::get('/contacts', [App\Http\Controllers\AllController::class, 'contacts'])->name('contacts');
+
+Route::get('/resources', [App\Http\Controllers\AllController::class, 'resources'])->name('resources');

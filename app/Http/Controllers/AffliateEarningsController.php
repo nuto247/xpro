@@ -10,9 +10,9 @@ class AffliateEarningsController extends Controller
 {
     public function list()
     {
-        $affliateEarnings = Refferal::where('user_id', Auth::id())->get();
+        $earnings = Refferal::where('user_id', Auth::id())->get();
 
-        return view('affliate_earnings', compact('affliateEarnings'));
+        return view('affliate_earnings', compact('earnings'));
 
     }
     

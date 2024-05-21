@@ -1,343 +1,196 @@
-<!DOCTYPE html>
-<html lang="zxx" class="js">
+@include('header')
+    <!-- Header Section End -->
 
-<head>
-    <base href="../">
-    <meta charset="utf-8">
-    <meta name="author" content="Softnio">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
-    <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="./images/favicon.png">
-    <!-- Page Title  -->
-    <title>PAMPost | Grow Your Assets</title>
-    <!-- StyleSheets  -->
-    <link rel="stylesheet" href="./assets/css/dashlite.css?ver=3.1.2">
-    <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=3.1.2">
-</head>
-
-<body class="nk-body bg-lighter npc-default has-sidebar ">
-    <div class="nk-app-root">
-        <!-- main @s -->
-        <div class="nk-main ">
-            <!-- sidebar @s -->
-            @include('guestsidebar')
-            <!-- sidebar @e -->
-            <!-- wrap @s -->
-            <div class="nk-wrap ">
-                <!-- main header @s -->
-                <div class="nk-header nk-header-fixed is-light">
-                    <div class="container-fluid">
-                        <div class="nk-header-wrap">
-                            <div class="nk-menu-trigger d-xl-none ms-n1">
-                                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
-                            </div>
-                            <div class="nk-header-brand d-xl-none">
-                                <a href="/" class="logo-link">
-                                    <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                                    <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
-                                </a>
-                            </div><!-- .nk-header-brand -->
-                            <div class="nk-header-search ms-3 ms-xl-0">
-                                <em class="icon ni ni-search"></em>
-                                <input type="text" class="form-control border-transparent form-focus-none" placeholder="Search anything">
-                            </div><!-- .nk-header-news -->
-                            <div class="nk-header-tools">
-                                <ul class="nk-quick-nav">
-                                  
-                           
-                                 
-                                    
-                                </ul>
-                            </div>
-                        </div><!-- .nk-header-wrap -->
-                    </div><!-- .container-fliud -->
+    <!-- Blog Details Hero Begin -->
+    <section class="blog-hero spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-9 text-center">
+                    <div class="blog__hero__text">
+                        <h2>     {{$product->product_name}}</h2>
+                        <ul>
+                            <li>By Deercreative</li>
+                            <li>February 21, 2019</li>
+                            <li>8 Comments</li>
+                        </ul>
+                    </div><br>
+                    <h2>Price: NGN{{$product->product_price}}<h2>
                 </div>
-                <!-- main header @e -->
-                <!-- content @s -->
-                <div class="nk-content ">
-                    <div class="container-fluid">
-                        <div class="nk-content-inner">
-                            <div class="nk-content-body">
-                                <div class="nk-block-head nk-block-head-sm">
-                                    <div class="nk-block-between">
-                                        <div class="nk-block-head-content">
-                                            <h3 class="nk-block-title page-title">Add Products</h3>
-                                        </div><!-- .nk-block-head-content -->
-                                        <div class="nk-block-head-content">
-                                            <div class="toggle-wrap nk-block-tools-toggle">
-                                                <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
-                                                <div class="toggle-expand-content" data-content="pageMenu">
-                                                    <ul class="nk-block-tools g-3">
-                                                        <li>
-                                                            <div class="drodown">
-                                                                <a href="#" class="dropdown-toggle btn btn-white btn-dim btn-outline-light" data-bs-toggle="dropdown"><em class="d-none d-sm-inline icon ni ni-calender-date"></em><span><span class="d-none d-md-inline">Last</span> 30 Days</span><em class="dd-indc icon ni ni-chevron-right"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><span>Last 30 Days</span></a></li>
-                                                                        <li><a href="#"><span>Last 6 Months</span></a></li>
-                                                                        <li><a href="#"><span>Last 1 Years</span></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li class="nk-block-tools-opt"><a href="#" class="btn btn-primary"><em class="icon ni ni-reports"></em><span>Reports</span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div><!-- .nk-block-head-content -->
-                                    </div><!-- .nk-block-between -->
-                                </div><!-- .nk-block-head -->
-                                <div class="card card-bordered card-preview">
-                                            <div class="card-inner">
-                                                <div class="preview-block">
-                                                <form method="POST" action="{{ url('/productupdate') }}" enctype="multipart/form-data">
-                                                      @csrf
-                                                    <div class="row gy-4">
-                                                  
-
-                                                        <div class="col-sm-8">
-
-                                                        <input type="hidden" name="id" value="{{$product->id}}" readonly><br><br>
-                                                        <div class="form-group">
-                                                                <label class="form-label" for="default-06">Product Image</label>
-                                                                <div class="form-control-wrap">
-                                                                <div><img src="{{ asset('images/' . $product->image_path) }}" width="600px" alt="Image"></div>
-                                                                <br>
-                                                                 
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="default-01">Product Name</label>
-                                                                <div class="form-control-wrap">
-                                                                    <input type="text" class="form-control" id="default-01" name="product_name" value="{{$product->product_name}}" placeholder="Product Name" readonly>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                      
-                                                     <br>
-                                                     <div class="col-sm-8">
-                                                     <div class="form-group">
-    <label class="form-label" for="default-01">Product Price</label>
-    <div class="form-control-wrap">
-        <input type="text" class="form-control" id="default-01" name="product_price" value="{{$product->product_price}}" placeholder="Product Price" readonly>
-    </div>
-</div>
-</div>
-<br>
-
-                                                      
-
-
-                                                        <div class="col-sm-8">
-                                                            <div class="form-group">
-                                                                <label class="form-label" for="default-textarea">Product Description</label>
-                                                                <div class="form-control-wrap">
-                                                                    <textarea class="form-control no-resize" name="product_description" value="{{$product->product_description}}" id="default-textarea" readonly>{{$product->product_description}}</textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <br>
-
-                                                       
-                                                        <div class="col-sm-8">
-                                                          
-                                                            <br>
-
-                                                            <button type="submit" class="btn btn-primary">Buy Now</button>
-
-
-                                                         
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-</form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- content @e -->
-                <!-- footer @s -->
-                <div class="nk-footer">
-                    <div class="container-fluid">
-                        <div class="nk-footer-wrap">
-                            <div class="nk-footer-copyright"> &copy; 2024. Innovative Goldstructures Limited.
-                            </div>
-                            <div class="nk-footer-links">
-                                <ul class="nav nav-sm">
-                                    <li class="nav-item dropup">
-                                        <a href="#" class="dropdown-toggle dropdown-indicator has-indicator nav-link text-base" data-bs-toggle="dropdown" data-offset="0,10"><span>English</span></a>
-                                        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
-                                            <ul class="language-list">
-                                                <li>
-                                                    <a href="#" class="language-item">
-                                                        <span class="language-name">English</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="language-item">
-                                                        <span class="language-name">Español</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="language-item">
-                                                        <span class="language-name">Français</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="language-item">
-                                                        <span class="language-name">Türkçe</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a data-bs-toggle="modal" href="#region" class="nav-link"><em class="icon ni ni-globe"></em><span class="ms-1">Select Region</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- footer @e -->
             </div>
-            <!-- wrap @e -->
         </div>
-        <!-- main @e -->
-    </div>
-    <!-- app-root @e -->
-    <!-- select region modal -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="region">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <a href="#" class="close" data-bs-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
-                <div class="modal-body modal-body-md">
-                    <h5 class="title mb-4">Select Your Country</h5>
-                    <div class="nk-country-region">
-                        <ul class="country-list text-center gy-2">
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/arg.png" alt="" class="country-flag">
-                                    <span class="country-name">Argentina</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/aus.png" alt="" class="country-flag">
-                                    <span class="country-name">Australia</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/bangladesh.png" alt="" class="country-flag">
-                                    <span class="country-name">Bangladesh</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/canada.png" alt="" class="country-flag">
-                                    <span class="country-name">Canada <small>(English)</small></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/china.png" alt="" class="country-flag">
-                                    <span class="country-name">Centrafricaine</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/china.png" alt="" class="country-flag">
-                                    <span class="country-name">China</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/french.png" alt="" class="country-flag">
-                                    <span class="country-name">France</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/germany.png" alt="" class="country-flag">
-                                    <span class="country-name">Germany</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/iran.png" alt="" class="country-flag">
-                                    <span class="country-name">Iran</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/italy.png" alt="" class="country-flag">
-                                    <span class="country-name">Italy</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/mexico.png" alt="" class="country-flag">
-                                    <span class="country-name">México</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/philipine.png" alt="" class="country-flag">
-                                    <span class="country-name">Philippines</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/portugal.png" alt="" class="country-flag">
-                                    <span class="country-name">Portugal</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/s-africa.png" alt="" class="country-flag">
-                                    <span class="country-name">South Africa</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/spanish.png" alt="" class="country-flag">
-                                    <span class="country-name">Spain</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/switzerland.png" alt="" class="country-flag">
-                                    <span class="country-name">Switzerland</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/uk.png" alt="" class="country-flag">
-                                    <span class="country-name">United Kingdom</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="country-item">
-                                    <img src="./images/flags/english.png" alt="" class="country-flag">
-                                    <span class="country-name">United State</span>
-                                </a>
-                            </li>
+    </section>
+    <!-- Blog Details Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12">
+
+                
+                <input type="hidden" name="id" value="{{$product->id}}" readonly><br><br>
+                    <div class="blog__details__pic">
+                    <img src="{{ asset('images/' . $product->image_path) }}">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__share">
+                            <span>share</span>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a></li>
+                                <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="blog__details__text">
+                            <p>Hydroderm is the highly desired anti-aging cream on the block. This serum restricts the
+                                occurrence of early aging sings on the skin and keeps the skin younger, tighter and
+                                healthier. It reduces the wrinkles and loosening of skin. This cream nourishes the skin
+                                and brings back the glow that had lost in the run of hectic years.</p>
+                            <p>The most essential ingredient that makes hydroderm so effective is Vyo-Serum, which is a
+                                product of natural selected proteins. This concentrate works actively in bringing about
+                                the natural youthful glow of the skin. It tightens the skin along with its moisturizing
+                                effect on the skin. The other important ingredient, making hydroderm so effective is
+                                “marine collagen” which along with Vyo-Serum helps revitalize the skin.</p>
+                        </div>
+                        <div class="blog__details__quote">
+                            <i class="fa fa-quote-left"></i>
+                            <p>“When designing an advertisement for a particular product many things should be
+                                researched like where it should be displayed.”</p>
+                            <h6>_ John Smith _</h6>
+                        </div>
+                        <div class="blog__details__text">
+                            <p>Vyo-Serum along with tightening the skin also reduces the fine lines indicating aging of
+                                skin. Problems like dark circles, puffiness, and crow’s feet can be control from the
+                                strong effects of this serum.</p>
+                            <p>Hydroderm is a multi-functional product that helps in reducing the cellulite and giving
+                                the body a toned shape, also helps in cleansing the skin from the root and not letting
+                                the pores clog, nevertheless also let’s sweeps out the wrinkles and all signs of aging
+                                from the sensitive near the eyes.</p>
+                        </div>
+                  
+                        
+                        <div class="blog__details__comment">
+                       
+                          
+                                <div class="row">
+                                   
+                                    <div class="col-lg-12 text-center">
+                                      
+                                    
+                                    <form method="POST" action="{{ route('paynow') }}">
+                                                                        @csrf
+
+                                                                        <input type="hidden" name="product_id"
+                                                                            value="{{ $product->id }}">
+
+                                                                        <button type="submit" class="btn btn-primary">
+                                                                            Pay Now
+                                                                        </button>
+
+                                                                    </form>
+                                    </div>
+                                </div>
+                     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                        </div>
+                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <a href="#"><img src="img/payment.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>Shopping</h6>
+                        <ul>
+                            <li><a href="#">Clothing Store</a></li>
+                            <li><a href="#">Trending Shoes</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Sale</a></li>
                         </ul>
                     </div>
                 </div>
-            </div><!-- .modal-content -->
-        </div><!-- .modla-dialog -->
-    </div><!-- .modal -->
-    <!-- JavaScript -->
-    <script src="./assets/js/bundle.js?ver=3.1.2"></script>
-    <script src="./assets/js/scripts.js?ver=3.1.2"></script>
-    <script src="./assets/js/charts/chart-ecommerce.js?ver=3.1.2"></script>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>Shopping</h6>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                            <li><a href="#">Delivary</a></li>
+                            <li><a href="#">Return & Exchanges</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>NewLetter</h6>
+                        <div class="footer__newslatter">
+                            <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                            <form action="#">
+                                <input type="text" placeholder="Your email">
+                                <button type="submit"><span class="icon_mail_alt"></span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="footer__copyright__text">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p>Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>2020
+                            All rights reserved | This template is made with <i class="fa fa-heart-o"
+                                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.slicknav.js') }}"></script>
+    <script src="{{ asset('js/mixitup.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

@@ -6,8 +6,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description"
-        content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="./images/favicon.png">
     <!-- Page Title  -->
@@ -31,27 +30,24 @@
                     <div class="container-fluid">
                         <div class="nk-header-wrap">
                             <div class="nk-menu-trigger d-xl-none ms-n1">
-                                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em
-                                        class="icon ni ni-menu"></em></a>
+                                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
                             </div>
                             <div class="nk-header-brand d-xl-none">
-                                <a href="html/index.html" class="logo-link">
-                                    <img class="logo-light logo-img" src="./images/logo.png"
-                                        srcset="./images/logo2x.png 2x" alt="logo">
-                                    <img class="logo-dark logo-img" src="./images/logo-dark.png"
-                                        srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                                <a href="/" class="logo-link">
+                                    <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
+                                    <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
                                 </a>
                             </div><!-- .nk-header-brand -->
                             <div class="nk-header-search ms-3 ms-xl-0">
                                 <em class="icon ni ni-search"></em>
-                                <input type="text" class="form-control border-transparent form-focus-none"
-                                    placeholder="Search anything">
+                                <input type="text" class="form-control border-transparent form-focus-none" placeholder="Search anything">
                             </div><!-- .nk-header-news -->
                             <div class="nk-header-tools">
                                 <ul class="nk-quick-nav">
-
-
-
+                                  
+                           
+                                 
+                                    
                                 </ul>
                             </div>
                         </div><!-- .nk-header-wrap -->
@@ -64,76 +60,112 @@
                         <div class="nk-content-inner">
                             <div class="nk-content-body">
                                 <div class="nk-block-head nk-block-head-sm">
-                                    <div class="nk-block-between g-3">
+                                    <div class="nk-block-between">
                                         <div class="nk-block-head-content">
-                                            <h3 class="nk-block-title page-title">Orders
-                                            </h3>
-                                            <div class="nk-block-des text-soft">
-                                                <p>You have total <span class="text-base">1,257</span> Orders.</p>
-                                            </div>
-                                        </div>
+                                            <h3 class="nk-block-title page-title">Add Products</h3>
+                                        </div><!-- .nk-block-head-content -->
                                         <div class="nk-block-head-content">
-                                            <a href="#"
-                                                class="btn btn-outline-light bg-white d-none d-sm-inline-flex"><em
-                                                    class="icon ni ni-download-cloud"></em><span>Download All</span></a>
-                                            <a href="#"
-                                                class="btn btn-icon btn-outline-light bg-white d-inline-flex d-sm-none"><em
-                                                    class="icon ni ni-download-cloud"></em></a>
-                                        </div>
-                                    </div>
-                                </div><!-- .nk-block-head -->
-                                <div class="nk-block">
-                                    <div class="row g-gs">
-
-                                        <div class="col-xxl-8">
-                                            <div class="card card-full">
-                                                <div class="card-inner">
-                                                    <div class="card-title-group">
-                                                        <div class="card-title">
-                                                            <h6 class="title">Recent Orders</h6>
-                                                        </div>
-                                                    </div>
+                                            <div class="toggle-wrap nk-block-tools-toggle">
+                                                <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
+                                                <div class="toggle-expand-content" data-content="pageMenu">
+                                                    <ul class="nk-block-tools g-3">
+                                                        <li>
+                                                            <div class="drodown">
+                                                                <a href="#" class="dropdown-toggle btn btn-white btn-dim btn-outline-light" data-bs-toggle="dropdown"><em class="d-none d-sm-inline icon ni ni-calender-date"></em><span><span class="d-none d-md-inline">Last</span> 30 Days</span><em class="dd-indc icon ni ni-chevron-right"></em></a>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <ul class="link-list-opt no-bdr">
+                                                                        <li><a href="#"><span>Last 30 Days</span></a></li>
+                                                                        <li><a href="#"><span>Last 6 Months</span></a></li>
+                                                                        <li><a href="#"><span>Last 1 Years</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="nk-block-tools-opt"><a href="#" class="btn btn-primary"><em class="icon ni ni-reports"></em><span>Reports</span></a></li>
+                                                    </ul>
                                                 </div>
-                                                <div class="nk-tb-list mt-n2">
-                                                    <div class="nk-tb-item nk-tb-head">
-                                                        <div class="nk-tb-col"><span>Order No.</span></div>
-                                                        <div class="nk-tb-col tb-col-sm"><span>Customer</span></div>
-                                                        <div class="nk-tb-col tb-col-md"><span>Date</span></div>
-                                                        <div class="nk-tb-col"><span>Amount</span></div>
-                                                        <div class="nk-tb-col"><span
-                                                                class="d-none d-sm-inline">Status</span></div>
-                                                    </div>
-                                                    @if($earnings->isEmpty())
-        <p>No affiliate earnings found for the user.</p>
-    @else
-                                                    @foreach($earnings as $earning)
-                                                    <div class="nk-tb-item">
-                                                        <div class="nk-tb-col"><span class="tb-lead"><a
-                                                                    href="#">#95954</a></span></div>
-                                                        <div class="nk-tb-col tb-col-sm">
-                                                            <div class="user-card">
-                                                             
-                                                                <div class="user-name"><span class="tb-lead">{{ $earning->refferal_percentage }}</span></div>
+                                            </div>
+                                        </div><!-- .nk-block-head-content -->
+                                    </div><!-- .nk-block-between -->
+                                </div><!-- .nk-block-head -->
+                                <div class="card card-bordered card-preview">
+                                            <div class="card-inner">
+                                                <div class="preview-block">
+                                           
+                                                    <div class="row gy-4">
+                                                  
+
+                                                        <div class="col-sm-8">
+
+                                                        <input type="hidden" name="id" value="{{$product->id}}" readonly><br><br>
+                                                        <div class="form-group">
+                                                                <label class="form-label" for="default-06">Product Image</label>
+                                                                <div class="form-control-wrap">
+                                                                <div><img src="{{ asset('images/' . $product->image_path) }}" width="600px" alt="Image"></div>
+                                                                <br>
+                                                                 
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="default-01">Product Name</label>
+                                                                <div class="form-control-wrap">
+                                                                    {{$product->product_name}}
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="nk-tb-col tb-col-md"><span
-                                                                class="tb-sub">{{ $earning->refferal_profit }}</span></div>
-                                                        <div class="nk-tb-col"><span class="tb-sub tb-amount">{{ $earning->created_at }}
-                                                                <span>USD</span></span></div>
-                                                        <div class="nk-tb-col"><span
-                                                                class="badge badge-dot badge-dot-xs bg-success">Paid</span>
+                                                      
+                                                     <br>
+                                                     <div class="col-sm-8">
+                                                     <div class="form-group">
+    <label class="form-label" for="default-01">Product Price</label>
+    <div class="form-control-wrap">
+{{$product->product_price}}
+    </div>
+</div>
+</div>
+<br>
+
+                                                      
+
+
+                                                        <div class="col-sm-8">
+                                                            <div class="form-group">
+                                                                <label class="form-label" for="default-textarea">Product Description</label>
+                                                                <div class="form-control-wrap">
+                                                               {{$product->product_description}}
+                                                                </div>
+                                                            </div>
                                                         </div>
+                                                        <br>
+
+                                                       
+                                                        <div class="col-sm-8">
+                                                          
+                                                            <br>
+
+                                                            <form method="POST"
+                                                                        action="{{ route('paynow') }}">
+                                                                        @csrf
+
+                                                                        <input type="hidden" name="product_id"
+                                                                            value="{{ $product->id }}">
+
+                                                                        <button type="submit" class="btn btn-primary">
+                                                                            Pay Now
+                                                                        </button>
+
+                                                                    </form>
+
+
+                                                         
                                                     </div>
-                                                    @endforeach
-                                               
-                                                    @endif
-                                                  
                                                 </div>
                                             </div>
                                         </div>
 
-                                    </div>
-                                </div><!-- .nk-block -->
+
                             </div>
                         </div>
                     </div>
@@ -143,15 +175,12 @@
                 <div class="nk-footer">
                     <div class="container-fluid">
                         <div class="nk-footer-wrap">
-                            <div class="nk-footer-copyright"> &copy; 2022 DashLite. Template by <a
-                                    href="https://softnio.com" target="_blank">Softnio</a>
+                            <div class="nk-footer-copyright"> &copy; 2024. Innovative Goldstructures Limited.
                             </div>
                             <div class="nk-footer-links">
                                 <ul class="nav nav-sm">
                                     <li class="nav-item dropup">
-                                        <a href="#"
-                                            class="dropdown-toggle dropdown-indicator has-indicator nav-link text-base"
-                                            data-bs-toggle="dropdown" data-offset="0,10"><span>English</span></a>
+                                        <a href="#" class="dropdown-toggle dropdown-indicator has-indicator nav-link text-base" data-bs-toggle="dropdown" data-offset="0,10"><span>English</span></a>
                                         <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end">
                                             <ul class="language-list">
                                                 <li>
@@ -178,9 +207,7 @@
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <a data-bs-toggle="modal" href="#region" class="nav-link"><em
-                                                class="icon ni ni-globe"></em><span class="ms-1">Select
-                                                Region</span></a>
+                                        <a data-bs-toggle="modal" href="#region" class="nav-link"><em class="icon ni ni-globe"></em><span class="ms-1">Select Region</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -320,6 +347,7 @@
     <!-- JavaScript -->
     <script src="./assets/js/bundle.js?ver=3.1.2"></script>
     <script src="./assets/js/scripts.js?ver=3.1.2"></script>
+    <script src="./assets/js/charts/chart-ecommerce.js?ver=3.1.2"></script>
 </body>
 
 </html>

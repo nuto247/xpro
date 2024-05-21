@@ -169,4 +169,13 @@ class AllController extends Controller
 
         return redirect('listproducts');
     }
+
+    public function boost()
+    {
+        $user = Auth::user();
+
+        $products = Product::all();
+
+        return view('boost', compact('user','products'));
+    }
 }

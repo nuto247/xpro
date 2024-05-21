@@ -31,6 +31,8 @@ class CreateNewUser implements CreatesNewUsers
 
         if(Cookie::has('ref_code')) {
             $ref = Cookie::get('ref_code');
+        } else {
+            $ref = '1234567890';
         }
 
         return User::create([

@@ -22,7 +22,7 @@
         <!-- main @s -->
         <div class="nk-main ">
             <!-- sidebar @s -->
-            @include('adminsidebar')
+            @include('guestsidebar')
             <!-- sidebar @e -->
             <!-- wrap @s -->
             <div class="nk-wrap ">
@@ -59,7 +59,7 @@
                                                     <em class="icon ni ni-user-alt"></em>
                                                 </div>
                                                 <div class="user-info d-none d-xl-block">
-                                                    <div class="user-status user-status-unverified">Unverified</div>
+                                                    <div class="user-status user-status-unverified">Affiliate Account</div>
                                                     <div class="user-name dropdown-indicator">{{ $user->name }}</div>
                                                 </div>
                                             </div>
@@ -78,15 +78,7 @@
                                             </div>
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
-                                                    <li><a href="html/user-profile-regular.html"><em
-                                                                class="icon ni ni-user-alt"></em><span>View
-                                                                Profile</span></a></li>
-                                                    <li><a href="html/user-profile-setting.html"><em
-                                                                class="icon ni ni-setting-alt"></em><span>Account
-                                                                Setting</span></a></li>
-                                                    <li><a href="html/user-profile-activity.html"><em
-                                                                class="icon ni ni-activity-alt"></em><span>Login
-                                                                Activity</span></a></li>
+                                                   
                                                     <li><a class="dark-switch" href="#"><em
                                                                 class="icon ni ni-moon"></em><span>Dark Mode</span></a>
                                                     </li>
@@ -94,7 +86,7 @@
                                             </div>
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
-                                                    <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign
+                                                    <li><a href="/logout"><em class="icon ni ni-signout"></em><span>Sign
                                                                 out</span></a></li>
                                                 </ul>
                                             </div>
@@ -117,6 +109,7 @@
                                         <div class="nk-block-head-content">
                                             <h3 class="nk-block-title page-title">Dashboard</h3>
                                         </div><!-- .nk-block-head-content -->
+                                        
                                         <div class="nk-block-head-content">
                                             <div class="toggle-wrap nk-block-tools-toggle">
                                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1"
@@ -124,36 +117,46 @@
                                                 <div class="toggle-expand-content" data-content="pageMenu">
                                                     <ul class="nk-block-tools g-3">
                                                         <li>
-                                                            <div class="drodown">
-                                                                <a href="#"
-                                                                    class="dropdown-toggle btn btn-white btn-dim btn-outline-light"
-                                                                    data-bs-toggle="dropdown"><em
-                                                                        class="d-none d-sm-inline icon ni ni-calender-date"></em><span><span
-                                                                            class="d-none d-md-inline">Last</span> 30
-                                                                        Days</span><em
-                                                                        class="dd-indc icon ni ni-chevron-right"></em></a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <ul class="link-list-opt no-bdr">
-                                                                        <li><a href="#"><span>Last 30
-                                                                                    Days</span></a></li>
-                                                                        <li><a href="#"><span>Last 6
-                                                                                    Months</span></a></li>
-                                                                        <li><a href="#"><span>Last 1
-                                                                                    Years</span></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
+                                                    
                                                         </li>
-                                                        <li class="nk-block-tools-opt"><a href="#"
-                                                                class="btn btn-primary"><em
-                                                                    class="icon ni ni-reports"></em><span>Reports</span></a>
-                                                        </li>
+                                                       
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div><!-- .nk-block-head-content -->
                                     </div><!-- .nk-block-between -->
                                 </div><!-- .nk-block-head -->
+
+                                <div class="nk-block">
+                                    <div class="card card-bordered">
+                                        <div class="nk-refwg">
+                                            <div class="nk-refwg-invite card-inner">
+                                                <div class="nk-refwg-head g-3">
+                                                    <div class="nk-refwg-title">
+                                                        <h5 class="title">Refer Us &amp; Earn</h5>
+                                                        <div class="title-sub">Use the bellow link to invite your
+                                                            friends.</div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="nk-refwg-url">
+                                                    <div class="form-control-wrap">
+                                                        <div class="form-clip clipboard-init"
+                                                            data-clipboard-target="#refUrl" data-success="Copied"
+                                                            data-text="Copy Link"><em
+                                                                class="clipboard-icon icon ni ni-copy"></em> <span
+                                                                class="clipboard-text">Copy Link</span></div>
+                                                        <div class="form-icon"><em class="icon ni ni-link-alt"></em>
+                                                        </div><input type="text" class="form-control copy-text"
+                                                            id="refUrl" value="{{ url('/') . '?ref=' . auth()->user()->affiliate_code }}"
+                                                            spellcheck="false" data-ms-editor="true">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="nk-block">
                                     <div class="row g-gs">
                                         <div class="col-xxl-3 col-sm-6">
@@ -264,36 +267,7 @@
                                     </div><!-- .row -->
                                 </div><!-- .nk-block -->
 
-                                <div class="nk-block">
-                                    <div class="card card-bordered">
-                                        <div class="nk-refwg">
-                                            <div class="nk-refwg-invite card-inner">
-                                                <div class="nk-refwg-head g-3">
-                                                    <div class="nk-refwg-title">
-                                                        <h5 class="title">Refer Us &amp; Earn</h5>
-                                                        <div class="title-sub">Use the bellow link to invite your
-                                                            friends.</div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="nk-refwg-url">
-                                                    <div class="form-control-wrap">
-                                                        <div class="form-clip clipboard-init"
-                                                            data-clipboard-target="#refUrl" data-success="Copied"
-                                                            data-text="Copy Link"><em
-                                                                class="clipboard-icon icon ni ni-copy"></em> <span
-                                                                class="clipboard-text">Copy Link</span></div>
-                                                        <div class="form-icon"><em class="icon ni ni-link-alt"></em>
-                                                        </div><input type="text" class="form-control copy-text"
-                                                            id="refUrl" value="{{ url('/') . '?ref=' . auth()->user()->affiliate_code }}"
-                                                            spellcheck="false" data-ms-editor="true">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>

@@ -59,3 +59,5 @@ Route::get('/payment/callback', 'PaymentController@handleGatewayCallback');
 Route::post('/paynow', [App\Http\Controllers\PaymentController::class, 'paynow'])->name('paynow')->middleware('auth');
 
 Route::get('/redirectpay', [App\Http\Controllers\PaymentController::class, 'redirectpay'])->name('redirectpay')->middleware('auth');
+
+Route::get('/boost', [App\Http\Controllers\AllController::class, 'boost'])->name('boost')->middleware('auth');

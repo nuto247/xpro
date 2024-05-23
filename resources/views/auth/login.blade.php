@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+        <img src="{{ url('img/logo.png') }}" />
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -43,6 +43,9 @@
                     {{ __('Log in') }}
                 </x-button>
             </div>
+            <div>
+               <a href="register"> Don't have an account? Click here to register now</a>
+</div>
         </form>
     </x-authentication-card>
 </x-guest-layout>

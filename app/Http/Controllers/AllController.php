@@ -14,10 +14,42 @@ class AllController extends Controller
 
     public function welcome()
     {
+      
         $products = Product::all();
-
         return view('welcome', compact('products'));
     }
+
+
+    public function about()
+    {
+        $products = Product::all();
+
+        return view('about', compact('products'));
+    }
+
+    public function contacts()
+    {
+        $products = Product::all();
+
+        return view('contact', compact('products'));
+    }
+
+    
+    public function resources()
+    {
+        $products = Product::all();
+
+        return view('resources', compact('products'));
+    }
+
+    public function courses()
+    {
+        $products = Product::all();
+
+        return view('courses', compact('products'));
+    }
+
+    
 
     public function logout()
     {

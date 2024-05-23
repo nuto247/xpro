@@ -1,96 +1,95 @@
 @include('header')
-    <!-- Header Section End -->
-
-    <!-- Blog Details Hero Begin -->
-    <section class="blog-hero spad">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-9 text-center">
-                    <div class="blog__hero__text">
-                        <h2>     About Us</h2>
-                        <ul>
-                            <li>By Deercreative</li>
-                            <li>February 21, 2019</li>
-                            <li>8 Comments</li>
-                        </ul>
-                    </div><br>
-                    <h2><h2>
-                </div>
-            </div>
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="hero__slider owl-carousel">
+     
         </div>
     </section>
-    <!-- Blog Details Hero End -->
+    <!-- Hero Section End -->
 
-    <!-- Blog Details Section Begin -->
-    <section class="blog-details spad">
+    <!-- Banner Section Begin -->
+
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- Product Section Begin -->
+    <section class="product spad">
         <div class="container">
-            <div class="row d-flex justify-content-center">
+            <div class="row">
                 <div class="col-lg-12">
-
-                
-             
-                    <div class="blog__details__pic">
-                    <img src="">
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="blog__details__content">
-                        <div class="blog__details__share">
-                            <span>share</span>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a></li>
-                                <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="blog__details__text">
-                            <p>Hydroderm is the highly desired anti-aging cream on the block. This serum restricts the
-                                occurrence of early aging sings on the skin and keeps the skin younger, tighter and
-                                healthier. It reduces the wrinkles and loosening of skin. This cream nourishes the skin
-                                and brings back the glow that had lost in the run of hectic years.</p>
-                            <p>The most essential ingredient that makes hydroderm so effective is Vyo-Serum, which is a
-                                product of natural selected proteins. This concentrate works actively in bringing about
-                                the natural youthful glow of the skin. It tightens the skin along with its moisturizing
-                                effect on the skin. The other important ingredient, making hydroderm so effective is
-                                “marine collagen” which along with Vyo-Serum helps revitalize the skin.</p>
-                        </div>
-                        <div class="blog__details__quote">
-                            <i class="fa fa-quote-left"></i>
-                            <p>“When designing an advertisement for a particular product many things should be
-                                researched like where it should be displayed.”</p>
-                            <h6>_ John Smith _</h6>
-                        </div>
-                        <div class="blog__details__text">
-                            <p>Vyo-Serum along with tightening the skin also reduces the fine lines indicating aging of
-                                skin. Problems like dark circles, puffiness, and crow’s feet can be control from the
-                                strong effects of this serum.</p>
-                            <p>Hydroderm is a multi-functional product that helps in reducing the cellulite and giving
-                                the body a toned shape, also helps in cleansing the skin from the root and not letting
-                                the pores clog, nevertheless also let’s sweeps out the wrinkles and all signs of aging
-                                from the sensitive near the eyes.</p>
-                        </div>
-                  
-                        
-                        <div class="blog__details__comment">
-                       
-                          
-                                <div class="row">
-                                   
-                                    <div class="col-lg-12 text-center">
-                                      
-                                    
-                                    
-                                    </div>
-                                </div>
+                    <ul class="filter__controls">
+                        <li class="active" data-filter="*">About Us - PAMPost</li>
                      
-                        </div>
-                    </div>
+                       
+                    </ul>
                 </div>
+            </div>
+            <div class="row product__filter">
+        
+         
+
+Welcome to PAMPost, your premier destination for unlocking the secrets to financial success through expertly crafted video tutorials. We are an innovative affiliate marketing agency dedicated to empowering individuals with the knowledge and skills necessary to thrive in today’s fast-paced digital economy.
+<br><br>
+**Our Mission**
+<br><br>
+At PAMPost, our mission is simple: to provide high-quality, actionable content that helps people transform their passions into profitable ventures. We believe in the power of education and the limitless potential of the internet to create opportunities for everyone, regardless of their background or experience.
+<br><br>
+**What We Offer**
+<br><br>
+Our comprehensive video tutorials cover a wide range of money-making skills, from the basics of affiliate marketing and e-commerce to advanced strategies in digital marketing, content creation, and more. Each tutorial is designed by industry experts who have successfully navigated the online business landscape, ensuring you receive practical, real-world advice that works.
+<br><br>
+**Why Choose PAMPost?**
+<br><br>
+
+1. **Expert-Led Content:** Our tutorials are created and led by seasoned professionals who have a proven track record of success in their respective fields. They share insider tips, strategies, and techniques that can help you achieve similar results.
+<br><br>
+2. **User-Friendly Platform:** Our platform is designed with you in mind. Easy to navigate and accessible from any device, PAMPost makes learning convenient and enjoyable.
+<br><br>
+3. **Community Support:** Join a vibrant community of like-minded individuals who are also on their journey to financial freedom. Share experiences, ask questions, and find support as you progress through our tutorials.
+<br><br>
+4. **Continuous Learning:** The digital world is constantly evolving, and so are we. We regularly update our content to reflect the latest trends, tools, and techniques, ensuring you stay ahead of the curve.
+<br><br>
+**Our Values**
+<br><br>
+- **Integrity:** We are committed to providing honest, transparent, and reliable information.<br>
+- **Empowerment:** We aim to equip you with the skills and confidence needed to succeed independently.<br>
+- **Innovation:** We embrace new ideas and technologies to deliver the best learning experience possible.<br>
+- **Community:** We foster a supportive environment where members can grow together and help each other succeed.<br>
+<br><br>
+**Join Us Today**
+<br><br>
+Embark on your journey to financial independence with PAMPost. Whether you are a beginner looking to learn the basics or an experienced marketer seeking advanced strategies, our video tutorials are tailored to meet your needs. Let us be your guide to mastering the skills that can turn your dreams into reality.
+<br><br>
+Visit [www.pampost.com](http://www.pampost.com) to get started today!
+<br><br>
+---
+
+**Connect with Us**
+<br><br>
+Follow us on social media to stay updated with the latest tutorials, tips, and success stories from our community. Feel free to reach out to us with any questions or for more information about our offerings.
+<br><br>
+- Facebook: [facebook.com/PAMPost](http://facebook.com/PAMPost)<br>
+- Twitter: [twitter.com/PAMPost](http://twitter.com/PAMPost)<br>
+- Instagram: [instagram.com/PAMPost](http://instagram.com/PAMPost)<br>
+- LinkedIn: [linkedin.com/company/PAMPost](http://linkedin.com/company/PAMPost)<br>
+<br><br>
+At PAMPost, we are more than just an affiliate marketing agency – we are your partners in success. Join us and start making your mark in the digital world today.
             </div>
         </div>
     </section>
-    <!-- Blog Details Section End -->
+    <!-- Product Section End -->
+
+    <!-- Categories Section Begin -->
+
+    <!-- Categories Section End -->
+
+    <!-- Instagram Section Begin -->
+
+    <!-- Instagram Section End -->
+
+    <!-- Latest Blog Section Begin -->
+
+    <!-- Latest Blog Section End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer">
@@ -99,7 +98,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="#"><img src="img/logo1.png" alt=""></a>
                         </div>
                         <p>The customer is at the heart of our unique business model, which includes design.</p>
                         <a href="#"><img src="img/payment.png" alt=""></a>
@@ -149,7 +148,7 @@
                                 document.write(new Date().getFullYear());
                             </script>2020
                             All rights reserved | This template is made with <i class="fa fa-heart-o"
-                                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                         </p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </div>
@@ -171,16 +170,16 @@
     <!-- Search End -->
 
     <!-- Js Plugins -->
-    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.nice-select.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.countdown.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.slicknav.js') }}"></script>
-    <script src="{{ asset('js/mixitup.min.js') }}"></script>
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -32,16 +32,11 @@
                 <div class="col-lg-8">
                     <div class="blog__details__content">
                         <div class="blog__details__share">
-                            <span>share</span>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" class="youtube"><i class="fa fa-youtube-play"></i></a></li>
-                                <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
+        
+                       
                         </div>
                         <div class="blog__details__text">
-                            <p>{{$product->product_description}}</p>
+                            <p>{!!$product->product_description!!}</p>
                         </div>
                    
                   

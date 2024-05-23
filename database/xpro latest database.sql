@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2024 at 05:00 PM
+-- Generation Time: May 23, 2024 at 05:37 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -93,7 +93,7 @@ CREATE TABLE `orders` (
   `amount` decimal(10,0) NOT NULL,
   `currency` varchar(255) NOT NULL,
   `transaction_id` varchar(255) DEFAULT NULL,
-  `refferalcode` int(11) NOT NULL,
+  `refferalcode` int(11) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `product_id` int(11) DEFAULT NULL
@@ -105,7 +105,15 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `user_id`, `payment_method`, `status`, `amount`, `currency`, `transaction_id`, `refferalcode`, `created_at`, `updated_at`, `product_id`) VALUES
 (1, 1, 'Card', 'pending', '45', '₦', 'as0kwa0n4m', 4378784, '2024-05-17 14:52:29', '2024-05-17 14:52:31', 1),
-(2, 6, 'Card', 'successful', '45', '₦', 'nb88v0bqlc', 4378784, '2024-05-17 14:52:46', '2024-05-17 14:54:37', 1);
+(2, 6, 'Card', 'successful', '45', '₦', 'nb88v0bqlc', 4378784, '2024-05-17 14:52:46', '2024-05-17 14:54:37', 1),
+(3, 8, 'Card', 'pending', '20000', '₦', 'y6fur1eb9l', NULL, '2024-05-20 10:47:49', '2024-05-20 10:47:50', 2),
+(4, 1, 'Card', 'pending', '40000', '₦', 'yl556hlm2u', NULL, '2024-05-21 06:38:05', '2024-05-21 06:38:06', 1),
+(5, 1, 'Card', 'pending', '20000', '₦', '4jxef1utl8', NULL, '2024-05-21 06:39:25', '2024-05-21 06:39:25', 2),
+(6, 1, 'Card', 'pending', '20000', '₦', 'qfgjk5wpq0', NULL, '2024-05-21 08:11:24', '2024-05-21 08:11:25', 2),
+(7, 1, 'Card', 'pending', '20000', '₦', 'y515vceksz', NULL, '2024-05-21 08:13:58', '2024-05-21 08:13:59', 2),
+(8, 1, 'Card', 'pending', '20000', '₦', '1lxilztcc9', 4378784, '2024-05-23 06:12:22', '2024-05-23 06:12:23', 2),
+(9, 1, 'Card', 'pending', '20000', '₦', 's3qylmd8o4', 4378784, '2024-05-23 06:18:22', '2024-05-23 06:18:22', 2),
+(10, 1, 'Card', 'pending', '40000', '₦', 'nt2i16lhoz', 4378784, '2024-05-23 06:23:05', '2024-05-23 06:23:07', 1);
 
 -- --------------------------------------------------------
 
@@ -167,7 +175,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `product_name`, `product_price`, `product_description`, `image_path`, `created_at`, `updated_at`) VALUES
-(1, 'HP 500', 45, 'best laptop you should use in 2024', NULL, '2024-05-17 15:52:00', '2024-05-17 15:52:00');
+(1, 'My Commission Shortcut: Affiliate Marketing Masterclass', 40000, 'Welcome to PAMPost, your premier destination for unlocking the secrets to financial success through expertly crafted video tutorials. We are an innovative affiliate marketing agency dedicated to empowering individuals with the knowledge and skills necessary to thrive in today’s fast-paced digital economy.\r\n<br><br>\r\n**Our Mission**\r\n<br><br>\r\nAt PAMPost, our mission is simple: to provide high-quality, actionable content that helps people transform their passions into profitable ventures. We believe in the power of education and the limitless potential of the internet to create opportunities for everyone, regardless of their background or experience.\r\n<br><br>\r\n**What We Offer**\r\n<br><br>\r\nOur comprehensive video tutorials cover a wide range of money-making skills, from the basics of affiliate marketing and e-commerce to advanced strategies in digital marketing, content creation, and more. Each tutorial is designed by industry experts who have successfully navigated the online business landscape, ensuring you receive practical, real-world advice that works.\r\n<br><br>\r\n**Why Choose PAMPost?**\r\n<br><br>\r\n1. **Expert-Led Content:** Our tutorials are created and led by seasoned professionals who have a proven track record of success in their respective fields. They share insider tips, strategies, and techniques that can help you achieve similar results.\r\n\r\n2. **User-Friendly Platform:** Our platform is designed with you in mind. Easy to navigate and accessible from any device, PAMPost makes learning convenient and enjoyable.\r\n\r\n3. **Community Support:** Join a vibrant community of like-minded individuals who are also on their journey to financial freedom. Share experiences, ask questions, and find support as you progress through our tutorials.\r\n\r\n4. **Continuous Learning:** The digital world is constantly evolving, and so are we. We regularly update our content to reflect the latest trends, tools, and techniques, ensuring you stay ahead of the curve.\r\n\r\n**Our Values**\r\n\r\n- **Integrity:** We are committed to providing honest, transparent, and reliable information.\r\n- **Empowerment:** We aim to equip you with the skills and confidence needed to succeed independently.\r\n- **Innovation:** We embrace new ideas and technologies to deliver the best learning experience possible.\r\n- **Community:** We foster a supportive environment where members can grow together and help each other succeed.\r\n\r\n\r\n**Join Us Today**', '1716475506.png', '2024-05-17 15:52:00', '2024-05-23 13:45:06'),
+(2, 'WhatsApp Sales Blueprint 2.0 Course', 20000, 'Large text area content', '1716187445.png', '2024-05-20 05:44:05', '2024-05-20 05:44:05');
 
 -- --------------------------------------------------------
 
@@ -215,8 +224,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('ChqIHzdIvT6uZw5a5TuWnxPM9uGhkmknxtKE8tDd', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiTkVXenpFNlNzRUJIZU5MNmU0RkJGYk90aWxkMnlQcUh5ODZyQU1MayI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MzoidXJsIjthOjA6e31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1715965255),
-('Q92K9yWk5aa8idJFXmmJnusm960X5J4eUUsKmknW', 6, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiN01YaW5pVUdpRFhGNDFRUHBmb1N6WWNVSFpITURNRUtrY0FiVVBUcCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzk6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZmZsaWF0ZS1lYXJuaW5ncyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjY7fQ==', 1715965278);
+('JZanp43gH3ErDJlKmrxWbB6XKdd3HbFY8WggFlbY', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Avast/124.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiR29uRVREbU40dkRqQkwwVVIySXM4N0FkRjd4M1ROT244N0o2ckRTciI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hYm91dCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1716473001),
+('YQzu4SSr5oSsiOOeGxjtYouRGSb3EVmdMc0nKuT3', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiZG95TlNhbTdoeGdWT0dCbVJXVFh5WjZsRXFhaloyc3Z6R21DSUcxNiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9kdWN0ZGV0YWlsLzEiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1716475516);
 
 -- --------------------------------------------------------
 
@@ -247,11 +256,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `affiliate_code`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`, `refferral_code`) VALUES
-(1, 'Onutochukwu Uche', '4378784', 'uchetochukwu@gmail.com', NULL, '$2y$12$c1yAOEZJda3RkvROUJ1PC.D8Dy1JWLR9ylV.XMOHGPFRFhQGW/n5a', NULL, NULL, NULL, 'hFktR90AR5Xa9ETw4TDA6hpakXucStl5nAt7x1Ro5B2UVgrh5xyfYwzufnF4', NULL, NULL, '2024-05-06 14:44:36', '2024-05-06 14:44:36', NULL),
+(1, 'Onutochukwu Uche', '4378784', 'uchetochukwu@gmail.com', NULL, '$2y$12$c1yAOEZJda3RkvROUJ1PC.D8Dy1JWLR9ylV.XMOHGPFRFhQGW/n5a', NULL, NULL, NULL, 'cw86vJL7Mn31ksxTeQZ3AZegjQK6Ne5XSsUyTk5kPxW6ciSq2MaTlkGuGsI4', NULL, NULL, '2024-05-06 14:44:36', '2024-05-06 14:44:36', NULL),
 (2, 'Solomon Sam', '94838190', 'sol@gmail.com', NULL, '$2y$12$wOalRftydIkuhL81tJUcMeF7NGr8VP/sg7he/efXoCDekSKu.XQS2', NULL, NULL, NULL, NULL, NULL, NULL, '2024-05-09 13:28:53', '2024-05-09 13:28:53', NULL),
 (3, 'Pam Post', '9646816', 'sales@pampost.com', NULL, '$2y$12$oc65j0k736kf1l2Sz7E5UeJniUPMkouPuaf9Giu7ygiOOV26rcMHK', NULL, NULL, NULL, 'K4log3UHB0LCirXuH4YxTRnTnky411eyR413NOZdNw2ZMKD0RtV5v6AYU5K7', NULL, NULL, '2024-05-10 08:50:20', '2024-05-10 08:50:20', NULL),
 (4, 'Bill D Gates', '76275555', 'bill@gate.com', NULL, '$2y$12$PAOq1qvS4kYS8/8mUdp6g.uu6BUWF1xpdmQxIVMwLHOrwZgnzzBnS', NULL, NULL, NULL, NULL, NULL, NULL, '2024-05-14 10:13:36', '2024-05-14 10:13:36', NULL),
-(6, 'chiwetara Rese igwe', 'jQ0TPRq35t', 'donchiwexco@gmail.com', NULL, '$2y$12$IdLrq712bIcA0AlLTpCe0eDI6Gx6RgXhg1tiPKbaA0Xqmptgk8TjO', NULL, NULL, NULL, NULL, NULL, NULL, '2024-05-17 14:27:59', '2024-05-17 14:27:59', '4378784');
+(6, 'chiwetara Rese igwe', 'jQ0TPRq35t', 'donchiwexco@gmail.com', NULL, '$2y$12$IdLrq712bIcA0AlLTpCe0eDI6Gx6RgXhg1tiPKbaA0Xqmptgk8TjO', NULL, NULL, NULL, NULL, NULL, NULL, '2024-05-17 14:27:59', '2024-05-17 14:27:59', '4378784'),
+(7, 'Bill D Gates', 'VUm09G9Hgk', 'bill33@gate.com', NULL, '$2y$12$/3JCOottbUWuw7NbluL0A.Y6sACjprEILCsm5LuGib6PuTYjtBUFy', NULL, NULL, NULL, NULL, NULL, NULL, '2024-05-20 10:02:59', '2024-05-20 10:02:59', ''),
+(8, 'Onutochukwu Uche iii', '8H9XWsGJGM', 'bill55@gate.com', NULL, '$2y$12$rVaqw3O8pYDMgTmtS3/pF.7T7X0rvQFcYAw2bElM8MH1NA2OwFOSW', NULL, NULL, NULL, NULL, NULL, NULL, '2024-05-20 10:16:30', '2024-05-20 10:16:30', '1234');
 
 --
 -- Indexes for dumped tables
@@ -337,7 +348,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -349,7 +360,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `refferals`
@@ -361,7 +372,7 @@ ALTER TABLE `refferals`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

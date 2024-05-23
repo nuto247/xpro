@@ -34,6 +34,14 @@ class AllController extends Controller
         return view('contact', compact('products'));
     }
 
+    public function courses()
+    {
+        $products = Product::all();
+
+        return view('courses', compact('products'));
+    }
+
+
     
     public function resources()
     {

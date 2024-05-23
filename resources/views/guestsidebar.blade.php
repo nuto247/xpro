@@ -30,37 +30,14 @@
                                     </a>
                                 </li><!-- .nk-menu-item -->
 
-                             
-                                <li class="nk-menu-item has-sub">
-                                    <a href="#" class="nk-menu-link nk-menu-toggle">
-                                    <span class="nk-menu-icon"><em class="icon ni ni-menu-circled"></em></span>
-                                        <span class="nk-menu-text">Courses</span>
+                                <li class="nk-menu-item">
+                                    <a href="{{ route('productlist') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-menu-circled"></em></span>
+                                        <span class="nk-menu-text">Products</span>
                                     </a>
-                                    <ul class="nk-menu-sub">
-                                        <li class="nk-menu-item">
-                                            <a href="addproducts" class="nk-menu-link"><span class="nk-menu-text">E-Books</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="listproducts" class="nk-menu-link"><span class="nk-menu-text">Facebook Advertising</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="listproducts" class="nk-menu-link"><span class="nk-menu-text">Digital Marketing</span></a>
-                                        </li>
-
-                                        <li class="nk-menu-item">
-                                            <a href="listproducts" class="nk-menu-link"><span class="nk-menu-text">Forex Trading</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="listproducts" class="nk-menu-link"><span class="nk-menu-text">Website Development</span></a>
-                                        </li>
-
-                                        <li class="nk-menu-item">
-                                            <a href="listproducts" class="nk-menu-link"><span class="nk-menu-text">Facebook advertising</span></a>
-                                        </li>
-
-                                    </ul><!-- .nk-menu-sub -->
                                 </li><!-- .nk-menu-item -->
 
+                    
 
                                 <li class="nk-menu-item">
                                     <a href="{{ route('order_list') }}" class="nk-menu-link">

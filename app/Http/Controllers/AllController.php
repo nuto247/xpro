@@ -42,11 +42,13 @@ class AllController extends Controller
         return view('resources', compact('products'));
     }
 
-    public function courses()
+    public function productlist()
     {
+
+        $user = Auth::user();
         $products = Product::all();
 
-        return view('courses', compact('products'));
+        return view('productlist', compact('products','user'));
     }
 
     

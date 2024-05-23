@@ -34,6 +34,8 @@ Route::post('/addproduct', [App\Http\Controllers\AllController::class, 'addprodu
 
 Route::get('/listproducts', [App\Http\Controllers\AllController::class, 'listproducts'])->name('listproducts');
 
+Route::get('/productlist', [App\Http\Controllers\AllController::class, 'productlist'])->name('productlist');
+
 Route::get('/editproducts/{id}', [App\Http\Controllers\AllController::class, 'editproducts'])->name('editproducts');
 
 Route::get('/productdetail/{id}', [App\Http\Controllers\AllController::class, 'productdetail'])->name('productdetail');

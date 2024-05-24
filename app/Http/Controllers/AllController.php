@@ -14,7 +14,7 @@ class AllController extends Controller
 
     public function welcome()
     {
-      
+
         $products = Product::all();
         return view('welcome', compact('products'));
     }
@@ -42,7 +42,7 @@ class AllController extends Controller
     }
 
 
-    
+
     public function resources()
     {
         $products = Product::all();
@@ -56,10 +56,10 @@ class AllController extends Controller
         $user = Auth::user();
         $products = Product::all();
 
-        return view('productlist', compact('products','user'));
+        return view('productlist', compact('products', 'user'));
     }
 
-    
+
 
     public function logout()
     {
@@ -75,7 +75,7 @@ class AllController extends Controller
         return view('addproducts', compact('user'));
     }
 
-  
+
 
     public function addproduct(Request $request)
     {
@@ -92,20 +92,20 @@ class AllController extends Controller
 
         $product = new Product();
 
-    
+
 
         $product->product_name = $request->input('product_name');
         $product->product_description = $request->input('product_description');
         $product->product_price = $request->input('product_price');
 
 
-        $imageName = time().'.'.$request->image->extension();  
+        $imageName = time() . '.' . $request->image->extension();
 
         $request->image->move(public_path('images'), $imageName);
-    
-    
+
+
         $product->image_path = $imageName;
-   
+
 
 
         $product->save();
@@ -120,31 +120,31 @@ class AllController extends Controller
 
         $products = Product::all();
 
-        return view('listproducts', compact('user','products'));
+        return view('listproducts', compact('user', 'products'));
     }
 
     public function editproducts(Request $request, $id)
 
     {
         if ($request->hasFile('image'))
-        $validatedData = $request->validate([
+            $validatedData = $request->validate([
 
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-            'product_name' => 'required|string',
-            'product_description' => 'required|string',
-            'product_price' => 'required|int',
-          
+                'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+                'product_name' => 'required|string',
+                'product_description' => 'required|string',
+                'product_price' => 'required|int',
 
-        ]);
+
+            ]);
 
         $user = Auth::user();
         $product = Product::find($id);
-        return view('addproductsedit', compact('product','user'));
+        return view('addproductsedit', compact('product', 'user'));
     }
 
 
 
-    
+
     public function productupdate(Request $request)
     {
 
@@ -158,12 +158,12 @@ class AllController extends Controller
         $product->product_description = request('product_description');
 
 
-        
-        $imageName = time().'.'.$request->image->extension();  
+
+        $imageName = time() . '.' . $request->image->extension();
 
         $request->image->move(public_path('images'), $imageName);
-    
-    
+
+
         $product->image_path = $imageName;
 
 
@@ -177,6 +177,24 @@ class AllController extends Controller
         return redirect('listproducts');
     }
 
+    public function productAfflicateCode($code)
+    {
+
+        if (!empty($code)) {
+
+            $splited = explode('-', $code);
+
+            $productId = $splited[0];
+
+            return redirect()->route('productdetail', $productId)
+                ->withCookie(cookie()->forever('pro_affliate_code', $code));
+
+        }
+
+        return redirect()->url('/');
+
+    }
+
     public function productdetail(Request $request, $id)
     {
         $product  = Product::find($request->id);
@@ -187,7 +205,7 @@ class AllController extends Controller
     }
 
 
-    
+
     public function dashboard()
     {
         $user = Auth::user();
@@ -218,6 +236,6 @@ class AllController extends Controller
 
         $products = Product::all();
 
-        return view('boost', compact('user','products'));
+        return view('boost', compact('user', 'products'));
     }
 }

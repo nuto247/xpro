@@ -122,6 +122,28 @@ class PaymentController extends Controller
                     $order->status = 'successful';
                     $order->save();
 
+                    if (Cookie::has('pro_affliate_code')) {
+
+                        $splited = explode('-', Cookie::get('pro_affliate_code'));
+
+                        $affCode = $splited[1];
+
+                        $referrer = User::where('affiliate_code', $affCode)->first();
+
+                        $salesCommision = 50;
+
+                        $profit = $order->amount * $salesCommision / 100;
+
+                        $refferal = new Refferal;
+                        $refferal->type = 'affliate_sales';
+                        $refferal->user_id =  $referrer->id;
+                        $refferal->order_id = $order->id;
+                        $refferal->refferal_percentage = $salesCommision;
+                        $refferal->refferal_profit = $profit;
+                        $refferal->save();
+
+                    }
+
                     if (Cookie::has('ref_code')) {
 
                         $ref = Cookie::get('ref_code');
@@ -133,16 +155,17 @@ class PaymentController extends Controller
                         $profit = $order->amount * $rp / 100;
 
                         $refferal = new Refferal;
+                        $refferal->type = 'signup';
                         $refferal->user_id =  $referrer->id;
                         $refferal->order_id = $order->id;
                         $refferal->refferal_percentage = $rp;
                         $refferal->refferal_profit = $profit;
                         $refferal->save();
+                        
                     }
                 }
 
                 return redirect()->route('order_list');
-
             }
         }
     }

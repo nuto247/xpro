@@ -135,7 +135,7 @@ class PaymentController extends Controller
                         $profit = $order->amount * $salesCommision / 100;
 
                         $refferal = new Refferal;
-                        $refferal->type = 'affliate_sales';
+                        $refferal->type = 'product';
                         $refferal->user_id =  $referrer->id;
                         $refferal->order_id = $order->id;
                         $refferal->refferal_percentage = $salesCommision;
@@ -155,13 +155,13 @@ class PaymentController extends Controller
                         $profit = $order->amount * $rp / 100;
 
                         $refferal = new Refferal;
-                        $refferal->type = 'signup';
+                        $refferal->type = 'referrer';
                         $refferal->user_id =  $referrer->id;
                         $refferal->order_id = $order->id;
                         $refferal->refferal_percentage = $rp;
                         $refferal->refferal_profit = $profit;
                         $refferal->save();
-                        
+
                     }
                 }
 
